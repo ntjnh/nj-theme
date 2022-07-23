@@ -7,7 +7,10 @@ const styles = () => {
         .pipe(dest("build/css"));
 };
 
+const watchSass = () => watch("./assets/scss/**/*.scss", styles);
+
 module.exports = {
     default: series(styles),
-    sass: styles
+    sass: styles,
+    watch: watchSass
 };
