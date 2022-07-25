@@ -24,29 +24,35 @@ get_header();
             <div class="row">
                 <div class="col-12 col-md-9">
                     <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus vitae suscipit at commodi officiis, nesciunt eligendi tempore delectus quasi repudiandae recusandae, culpa, impedit possimus mollitia dolores nobis consectetur. Inventore, quae.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus vitae suscipit at commodi officiis, nesciunt eligendi tempore delectus quasi repudiandae recusandae, culpa, impedit possimus mollitia dolores nobis consectetur. Inventore, quae.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus vitae suscipit at commodi officiis, nesciunt eligendi tempore delectus quasi repudiandae recusandae, culpa, impedit possimus mollitia dolores nobis consectetur. Inventore, quae.</p>
+                        <?php echo get_field('description'); ?>
                     </div>
                 </div>
                 <div class="col-12 col-md-3">
                     <h4>Website Type</h4>
-                    <p>Shopping Centre</p>
+                    <p><?php echo get_field('industry'); ?></p>
 
                     <h4>Involvement</h4>
                     <ul>
-                        <li>Web Design</li>
-                        <li>Web Development</li>
+                        <?php 
+                        $types = get_terms( 'project_type' );
+                        if( ! empty( $types ) && ! is_wp_error( $types ) ) {
+                            foreach( $types as $type ) {
+                                echo '<li>' . $type->name . '</li>';
+                            }
+                        }
+                        ?>
                     </ul>
 
                     <h4>Visit</h4>
-                    <a href="https://theglassworksbarnsley.com" target="_blank">theglassworksbarnsley.com</a>
+                    <a href="<?php echo get_field('visit')['url']; ?>" target="_blank"><?php echo get_field('visit')['title']; ?></a>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-12">
-                    <img src="https://via.placeholder.com/960x960" alt="Screenshot">
+                    <div class="screenshot">
+                        <img src="https://via.placeholder.com/960x960" alt="Screenshot">
+                    </div>
                 </div>
             </div>
 
