@@ -29,23 +29,19 @@ get_header();
                         <h1><?php the_title(); ?></h1>
                     </header>
 
-                    <?php the_post_thumbnail(); ?>
-
-                    <div class="entry-content">
+                    <div class="page-content">
                         <?php
                         the_content();
-
                         ?>
-                    </div><!-- .entry-content -->
+                    </div>
 
-                    
-                </article><!-- #post-<?php the_ID(); ?> -->
+                </article>
 
             <?php		
-            endwhile; // End of the loop.
+            endwhile;
             ?>
         </div>
 
-	</main><!-- #main -->
+	</main>
 
 <?php get_footer();
