@@ -1,0 +1,55 @@
+.header {
+    background-color: $black;
+    border-bottom: 1px solid $white;
+    color: $white;
+    padding: 32px 0;
+
+    .row .logo-col,
+    .row .nav-col  {
+        display: flex;
+        align-items: center;
+    }
+
+    .row .nav-col {
+        justify-content: end;
+    }
+
+    .title {
+        text-transform: uppercase;
+
+        h1 {
+            color: $white;
+            letter-spacing: .125rem;
+            line-height: 1;
+            margin: 0;
+        }
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &-item {
+            display: inline-block;
+
+            a {
+                color: $white;
+                line-height: 1;
+                padding: 0.5rem 1rem;
+                text-decoration: none;
+    
+                &:last-of-type {
+                    padding-right: 0;
+                }
+    
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        }
+    }
+}
