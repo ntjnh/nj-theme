@@ -1,0 +1,145 @@
+// About
+section.about {
+    background-color: $black;
+    color: $white;
+
+    .about-content {
+        padding-bottom: 12px;
+        padding-top: 12px;
+
+        h2 {
+            color: $white;
+        }
+    }
+}
+
+// Projects
+section.projects {
+    background-color: $black;
+    color: $white;
+    padding-bottom: 72px;
+
+    h2 {
+        color: $white;
+    }
+
+    .card {
+        background-color: transparent;
+        border-color: $yellow;
+        border-radius: 0;
+
+        &-img-overlay {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+            &:before {
+                background-color: rgba($black, 0.4);
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: 0;
+            }
+
+            .card-title {
+                background-color: $yellow;
+                color: $black;
+                margin-bottom: 0;
+                padding: 4px 16px;
+                position: relative;
+                z-index: 1;
+
+                a {
+                    color: $black;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        &:hover {
+            border-color: $white;
+
+            .card-title {
+                background-color: $black;
+                color: $white;
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// Blog
+section.blog {
+    background-color: $yellow;
+
+    .card {
+        background-color: transparent;
+        border-bottom: 1px solid $black;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid $black;
+        border-radius: 0;
+        margin: 0;
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
+        transition: .3s background ease-in-out;
+
+        &:hover {
+            background-color: $black;
+            color: $yellow;
+
+            .card-title {
+                color: $yellow;
+            }
+
+            .btn-black {
+                background-color: $yellow;
+                color: $black;
+            }
+        }
+
+        .card-body {
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 1.75rem 0 0;
+        }
+
+        .card-footer {
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 0 0 1.75rem;
+        }
+
+        &,
+        .btn {
+            border-radius: 0;
+        }
+
+        .card-title,
+        .card-text {
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    .blog-button {
+        margin-top: 48px;
+    }
+}
+
+// More Info
+section.more-info {
+    background-color: $yellow;
+
+    h2 {
+        margin-bottom: 16px;
+    }
+}
