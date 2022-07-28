@@ -1,0 +1,41 @@
+.wpforms-container {
+    margin: 0 !important;
+    max-width: 600px !important;
+
+    .wpforms-form {
+        .wpforms-field-container {
+            .wpforms-field-label {
+                font-family: $heading-font !important;
+                font-size: 1.125rem;
+                letter-spacing: .05em;
+                margin-bottom: .5rem;
+                text-transform: uppercase;
+            }
+    
+            input[type=text],
+            select,
+            textarea {
+                border-radius: 0 !important;
+            }
+        }
+
+        .wpforms-submit-container {
+            .wpforms-submit {
+                background-color: $black;
+                border-color: $black;
+                color: $white;
+                font-family: $heading-font !important;
+                letter-spacing: .1em;
+                padding: .75rem 3rem;
+                text-transform: uppercase;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: $yellow;
+                    border-color: $yellow;
+                    color: $black;
+                }
+            }
+        }
+    }
+}
