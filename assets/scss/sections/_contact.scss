@@ -1,28 +1,47 @@
-.wpforms-container {
+.wpcf7 {
     margin: 0 !important;
     max-width: 600px !important;
 
-    .wpforms-form {
-        .wpforms-field-container {
-            .wpforms-field-label {
+    form {
+        p {
+            label {
                 font-family: $heading-font !important;
                 font-size: 1.125rem;
                 letter-spacing: .05em;
                 margin-bottom: .5rem;
                 text-transform: uppercase;
-            }
-    
-            input[type=text],
-            select,
-            textarea {
-                border-radius: 0 !important;
-            }
-        }
+                width: 100%;
 
-        .wpforms-submit-container {
-            .wpforms-submit {
+                .wpcf7-form-control-wrap {
+                    display: block;
+                    margin-top: 6px;
+
+                    input[type="text"],
+                    input[type="email"],
+                    select,
+                    textarea {
+                        border: 1px solid $black;
+                        border-radius: 0;
+                        display: block;
+                        padding: .25rem .5rem;
+                        width: 100%;
+
+                        &.wpcf7-not-valid {
+                            border-color: $red;
+                        }
+                    }
+
+                    .wpcf7-not-valid-tip {
+                        color: $red;
+                        margin-top: .5rem;
+                        text-transform: none;
+                    }
+                }
+            }
+
+            .wpcf7-submit {
                 background-color: $black;
-                border-color: $black;
+                border: 1px solid $black;
                 color: $white;
                 font-family: $heading-font !important;
                 letter-spacing: .1em;
@@ -36,6 +55,11 @@
                     color: $black;
                 }
             }
+        }
+
+        .wpcf7-response-output {
+            margin: 2em 0 0;
+            padding: .25rem .5rem;
         }
     }
 }
