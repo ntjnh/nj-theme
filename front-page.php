@@ -14,6 +14,25 @@
 
 get_header();
 
+// ACF fields
+$about = get_field('about');
+$about_content = $about['content'];
+$about_image = $about['image'];
+// buttons
+
+$info = get_field('more_info');
+$info_image = $info['image'];
+$info_content = $info['content'];
+
+$projects = get_field('projects');
+$projects_heading = $projects['heading'];
+$projects_featured = $projects['featured'];
+
+$blog_posts = get_field('blog_posts');
+$blog_heading = $blog_posts['heading'];
+$blog_featured = $blog_posts['featured'];
+$blog_more_button = $blog_posts['more_button'];
+
 ?>
     <h6 style="background-color: #ffe66b; margin: 0; padding: 4px;">front-page.php</h6>
     <main>
@@ -32,7 +51,7 @@ get_header();
                     </div>
 
                     <div class="col-12 col-md-4 pe-md-0">
-                        <img class="img-fluid" src="https://source.unsplash.com/random/500x625/?man" alt="Nate">
+                        <img class="img-fluid" src="<?php echo $about_image['url']; ?>" alt="<?php echo $about_image['alt']; ?>">
                     </div>
                 </div>
             </div>
@@ -42,7 +61,7 @@ get_header();
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-8">
-                        <img class="img-fluid" src="https://source.unsplash.com/random/750x500/?ocean" alt="Ocean">
+                        <img class="img-fluid" src="<?php echo $info_image['url']; ?>" alt="<?php echo $info_image['alt']; ?>">
                     </div>
     
                     <div class="col-12 col-md-4">
@@ -56,7 +75,7 @@ get_header();
         <!-- Projects -->
         <section class="projects">
             <div class="container">
-                <h2 class="text-center">Projects</h2>
+                <h2 class="text-center"><?php echo $projects_heading; ?></h2>
 
                 <div class="row">
                     <div class="col">
@@ -101,7 +120,7 @@ get_header();
 
         <section class="blog">
             <div class="container">
-                <h2 class="text-center">Blog</h2>
+                <h2 class="text-center"><?php echo $blog_heading; ?></h2>
 
                 <div class="row">
                     <div class="col-12 col-md-4">
@@ -145,7 +164,7 @@ get_header();
                 </div>            
 
                 <div class="blog-button text-center">
-                    <a class="btn btn-black" href="#" role="button">View All</a>
+                    <a class="btn btn-black" href="<?php echo $blog_more_button['url']; ?>" role="button"><?php echo $blog_more_button['title']; ?></a>
                 </div>
             </div>
         </section>
