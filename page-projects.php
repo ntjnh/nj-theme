@@ -15,33 +15,35 @@ get_header();
                 <h1><?php the_title(); ?></h1>
             </header>
 
-            <?php
-            $args = array(
-                'post_type' => array( 'projects' )
-            );
+            <div class="row">
 
-            $the_query = new WP_Query( $args );
+                <?php
+                $args = array(
+                    'post_type' => array( 'projects' )
+                );
 
-            while ( $the_query->have_posts() ) :
-                $the_query->the_post();
+                $the_query = new WP_Query( $args );
 
-            ?>
+                while ( $the_query->have_posts() ) :
+                    $the_query->the_post();
 
-                <article>
+                ?>
 
-                    <!-- Post thumbnail -->
+                    <article class="col-6 mb-4">
+                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="mb-3">
 
-                    <h2><?php the_title(); ?></h2>
+                        <h2><?php the_title(); ?></h2>
 
-                    <!-- Short description -->
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil, tenetur unde eligendi aliquam perferendis. Aut nobis, nihil tenetur autem, sequi voluptate voluptatum incidunt pariatur, tempore ratione quia nulla facere.</p>
+                    </article>
 
-                </article>
+                <?php		
+                endwhile;
 
-            <?php		
-            endwhile;
+                wp_reset_postdata();
+                ?>
 
-            wp_reset_postdata();
-            ?>
+            </div>
         </div>
 
 	</main>
