@@ -17,10 +17,11 @@ const scripts = () => {
 };
 
 const watchSass = () => watch("./assets/scss/**/*.scss", styles);
+const watchJs = () => watch("./assets/js/**/*.js", scripts);
 
 module.exports = {
     default: series(styles, scripts),
     sass: styles,
     js: scripts,
-    watch: watchSass
+    watch: parallel(watchSass, watchJs)
 };
