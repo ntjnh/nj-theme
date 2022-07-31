@@ -29,7 +29,13 @@ add_action( 'after_setup_theme', 'nate_setup' );
 
 // Enqueue scripts and styles.
 function nate_scripts() {
-    wp_enqueue_style('nate-style', get_template_directory_uri() . '/build/css/app.css', array(), NATE_VERSION);	
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato:wght@300;400;700&display=swap', array(), false, 'all' );	
+    wp_enqueue_style( 'nate-style', get_template_directory_uri() . '/build/css/app.css', array(), NATE_VERSION, 'all' );	
+
+	wp_enqueue_script( 'fontawesome', 'https://kit.fontawesome.com/6e2ccb04f1.js?ver=5.15.3', array(), '5.15.3', false );
+	
+	wp_enqueue_script( 'jquery-masonry', array( 'jquery' ), NATE_VERSION, true );
+	wp_enqueue_script( 'nate-script', get_template_directory_uri() . '/build/js/app.js', array( 'jquery' ), NATE_VERSION, true );
 }
 
 add_action( 'wp_enqueue_scripts', 'nate_scripts' );
