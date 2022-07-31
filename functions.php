@@ -102,12 +102,11 @@ function project_type_taxonomy() {
 	);
 
 	register_taxonomy('project_type', 'projects', array(
-		'hierarchical' => false,
+		'hierarchical' => true,
 		'labels' => $labels,
 		'show_ui' => true,
 		'show_in_rest' => false,
 		'show_admin_column' => true,
-		'update_count_callback' => '_update_post_term_count',
 		'query_var' => true,
 		'rewrite' => array( 'slug' => 'project-type' ),
 	));
