@@ -34,7 +34,6 @@ $blog_featured = $blog_posts['featured'];
 $blog_more_button = $blog_posts['more_button'];
 
 ?>
-    <h6 style="background-color: #ffe66b; margin: 0; padding: 4px;">front-page.php</h6>
     <main>
         <section class="about">
             <div class="container">
@@ -73,50 +72,42 @@ $blog_more_button = $blog_posts['more_button'];
         </section>
 
         <!-- Projects -->
+        <?php if( $projects_featured ): ?>
         <section class="projects">
             <div class="container">
                 <h2 class="text-center"><?php echo $projects_heading; ?></h2>
 
                 <div class="row">
-                    <div class="col">
-                        <div class="card">
-                            <img src="https://source.unsplash.com/random/500x500/?puppy" class="card-img" alt="Project Name">
-                            <div class="card-img-overlay">
-                                <h3 class="card-title">
-                                    <a href="#">
-                                        Project Name
-                                    </a>
-                                </h3>
+                    <?php foreach( $projects_featured as $post ): 
+                        // Setup this post for WP functions (variable must be named $post).
+                    setup_postdata($post); 
+                    
+                    $title = get_the_title();
+                    ?>
+
+                        <div class="col">
+                            <div class="card">
+                                <?php the_post_thumbnail( 'thumbnail', ['class' => 'card-img', 'alt' => $title] ); ?>
+
+                                <div class="card-img-overlay">
+                                    <h3 class="card-title">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php echo $title; ?>
+                                        </a>
+                                    </h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="https://source.unsplash.com/random/400x400/?puppy" class="card-img" alt="Project Name">
-                            <div class="card-img-overlay">
-                                <h3 class="card-title">
-                                    <a href="#">
-                                        Project Name
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="https://source.unsplash.com/random/600x600/?puppy" class="card-img" alt="Project Name">
-                            <div class="card-img-overlay">
-                                <h3 class="card-title">
-                                    <a href="#">
-                                        Project Name
-                                    </a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
+
+                    <?php endforeach; 
+                    // Reset the global post object so that the rest of the page works correctly.
+                    wp_reset_postdata(); ?>
+                
                 </div>
+
             </div>
         </section>
+        <?php endif; ?>
 
         <section class="blog">
             <div class="container">
