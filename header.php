@@ -36,10 +36,8 @@
             <div class="row">
                 <div class=" logo-col col-12 col-md-4">
     
-                    <div class="title">
-                        <h1>
-                            <a href="<?php echo get_bloginfo('url'); ?>">Nate</a>
-                        </h1>
+                    <div class="h1">
+                        <a href="<?php echo get_bloginfo('url'); ?>">Nate</a>
                     </div>
             
                 </div>
