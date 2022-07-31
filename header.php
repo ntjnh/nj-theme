@@ -36,7 +36,7 @@
             <div class="row">
                 <div class=" logo-col col-12 col-md-4">
     
-                    <div class="h1">
+                    <div class="title">
                         <a href="<?php echo get_bloginfo('url'); ?>">Nate</a>
                     </div>
             
