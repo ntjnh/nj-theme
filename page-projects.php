@@ -8,6 +8,7 @@
 get_header();
 
 ?>
+
 	<main class="py-5">
 
 		<div class="container">
@@ -15,7 +16,9 @@ get_header();
                 <h1><?php the_title(); ?></h1>
             </header>
 
-            <div class="row">
+            <div class="grid row gy-4">
+
+                <div class="grid-sizer col-12 col-md-6"></div>
 
                 <?php
                 $args = array(
@@ -29,12 +32,24 @@ get_header();
 
                 ?>
 
-                    <article class="col-6 mb-4">
-                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="mb-3">
+                    <article class="grid-item col-12 col-md-6">
 
-                        <h2><?php the_title(); ?></h2>
+                        <div class="grid-item-content">
+                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="mb-3">
 
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil, tenetur unde eligendi aliquam perferendis. Aut nobis, nihil tenetur autem, sequi voluptate voluptatum incidunt pariatur, tempore ratione quia nulla facere.</p>
+                            <h2><?php the_title(); ?></h2>
+                            <ul class="list-inline">
+                                <?php 
+                                $types = get_terms( 'project_type' );
+                                foreach( $types as $type ) {
+                                    echo '<li class="list-inline-item">' . $type->name . '</li>';
+                                }
+                                ?>
+                            </ul>
+
+                            <p class="m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil, tenetur unde eligendi aliquam perferendis. Aut nobis, nihil tenetur autem, sequi voluptate voluptatum incidunt pariatur, tempore ratione quia nulla facere.</p>
+                        </div>
+
                     </article>
 
                 <?php		
