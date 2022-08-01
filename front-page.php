@@ -18,7 +18,6 @@ get_header();
 $about = get_field('about');
 $about_content = $about['content'];
 $about_image = $about['image'];
-// buttons
 
 $info = get_field('more_info');
 $info_image = $info['image'];
@@ -40,13 +39,9 @@ $blog_more_button = $blog_posts['more_button'];
                 <div class="row">
                     <div class="col-12 col-md-8 about-content">
                         <h2>Hello, I'm <?php echo get_bloginfo('title'); ?>.</h2>
-                        
                         <p class="text-uppercase fw-normal"><?php echo get_bloginfo('description'); ?></p>
                         
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-                        <p class="m-0">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.</p>
-
-                        <a href="#" class="btn btn-yellow d-inline-block mt-3">About Me</a>
+                        <?php echo $about_content; ?>
                     </div>
 
                     <div class="col-12 col-md-4 pe-md-0">
