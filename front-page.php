@@ -109,49 +109,35 @@ $blog_more_button = $blog_posts['more_button'];
         </section>
         <?php endif; ?>
 
+        <?php if( $blog_featured ) : ?>
         <section class="blog">
             <div class="container">
                 <h2 class="text-center"><?php echo $blog_heading; ?></h2>
 
                 <div class="row">
-                    <div class="col-12 col-md-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora asperiores repellat consequatur corrupti accusantium, omnis voluptas, exercitationem earum blanditiis ab culpa ipsam sint? Voluptatem omnis molestiae placeat quia dolor tenetur?</p>
-                            </div>
 
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-black">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4">
-                        <div class="card active h-100">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo assumenda sapiente recusandae adipisci ipsa ipsam est, maxime magni quis dignissimos autem quae, earum, unde doloribus neque saepe? Aliquam, at. Eligendi?</p>
-                            </div>
-
-                            <div class="card-footer">
-                                <a href="#" class="btn btn-black">Read more</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php foreach( $blog_featured as $post ): 
+                        // Setup this post for WP functions (variable must be named $post).
+                        setup_postdata($post); 
+                    ?>
 
                     <div class="col-12 col-md-4">
                         <div class="card h-100">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt non deserunt voluptatum fugit, facere nisi sequi necessitatibus laborum quis! Vero id saepe tempora sit quibusdam non illum a similique qui?</p>
+                                <h5 class="card-title"><?php the_title(); ?></h5>
+                                <p class="card-text"><?php echo get_the_excerpt(); ?></p>
                             </div>
 
                             <div class="card-footer">
-                                <a href="#" class="btn btn-black">Read more</a>
+                                <a href="<?php the_permalink(); ?>" class="btn btn-black">Read more</a>
                             </div>
                         </div>
                     </div>
+
+                    <?php endforeach; 
+                    // Reset the global post object so that the rest of the page works correctly.
+                    wp_reset_postdata(); ?>
+
                 </div>            
 
                 <div class="blog-button text-center">
@@ -159,6 +145,8 @@ $blog_more_button = $blog_posts['more_button'];
                 </div>
             </div>
         </section>
+        <?php endif; ?>
+
     </main>
 
 <?php get_footer(); ?>
