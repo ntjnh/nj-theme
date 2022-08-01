@@ -64,8 +64,7 @@ $blog_more_button = $blog_posts['more_button'];
                     </div>
     
                     <div class="col-12 col-md-4">
-                        <h2>Lorem ipsum dolor sit amet consectetur</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore qui, id facilis dolore alias libero illum! Praesentium hic quaerat, nostrum beatae, voluptatem animi omnis ratione libero suscipit veniam, culpa ullam?</p>
+                        <?php echo $info_content; ?>
                     </div>
                 </div>
             </div>
