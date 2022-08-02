@@ -1,3 +1,19 @@
+// Projects Page
+.page-projects {
+    .project {
+        h2 {
+            a {
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+// Single Project
 .project-title {
     background-color: $black;
     color: $yellow;

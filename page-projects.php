@@ -9,7 +9,7 @@ get_header();
 
 ?>
 
-	<main class="py-5">
+	<main class="page-projects py-5">
 
 		<div class="container">
             <header class="page-header">
@@ -32,12 +32,18 @@ get_header();
 
                 ?>
 
-                    <article class="grid-item col-12 col-md-6">
+                    <article class="project grid-item col-12 col-md-6">
 
                         <div class="grid-item-content">
-                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="mb-3">
+                            <a href="<?php the_permalink(); ?>">
+                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>" class="mb-3">
+                            </a>
 
-                            <h2><?php the_title(); ?></h2>
+                            <h2>
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_title(); ?>
+                                </a>
+                            </h2>
                             <ul class="list-inline">
                                 <?php 
                                 $types = get_terms( 'project_type' );
