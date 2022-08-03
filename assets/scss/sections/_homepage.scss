@@ -27,6 +27,7 @@ section.projects {
         background-color: transparent;
         border-color: $yellow;
         border-radius: 0;
+        transition: all 0.7s ease-in-out;
 
         &-img-overlay {
             display: flex;
@@ -52,6 +53,7 @@ section.projects {
                 padding: 4px 16px;
                 position: relative;
                 text-align: center;
+                transition: all 0.3s ease-in-out;
                 z-index: 1;
 
                 a {
