@@ -82,14 +82,14 @@ $blog_more_button = $blog_posts['more_button'];
                         <div class="col">
                             <div class="card">
                                 <?php the_post_thumbnail( 'thumbnail', ['class' => 'card-img', 'alt' => $title] ); ?>
-
-                                <div class="card-img-overlay">
-                                    <h3 class="card-title">
-                                        <a href="<?php the_permalink(); ?>">
+                                
+                                <a href="<?php the_permalink(); ?>">
+                                    <div class="card-img-overlay">
+                                        <h3 class="card-title">
                                             <?php echo $title; ?>
-                                        </a>
-                                    </h3>
-                                </div>
+                                        </h3>
+                                    </div>
+                                </a>
                             </div>
                         </div>
 
