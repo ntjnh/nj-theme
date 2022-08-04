@@ -24,7 +24,7 @@ get_header();
             <div class="row">
                 <div class="col-12 col-md-9">
                     <div>
-                        <?php echo get_field('description'); ?>
+                        <?php echo get_field('summary'); ?>
                     </div>
                 </div>
                 <div class="col-12 col-md-3">
