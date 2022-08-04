@@ -53,7 +53,9 @@ get_header();
                                 ?>
                             </ul>
 
-                            <p class="m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque nihil, tenetur unde eligendi aliquam perferendis. Aut nobis, nihil tenetur autem, sequi voluptate voluptatum incidunt pariatur, tempore ratione quia nulla facere.</p>
+                            <?php $description = get_field('description'); ?>
+
+                            <p class="m-0"><?php echo $description; ?></p>
                         </div>
 
                     </article>
