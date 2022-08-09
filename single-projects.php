@@ -65,7 +65,17 @@ get_header();
                 </div>
             </div>
 
-        </div>
+            <div class="row pt-3">
+                <div class="col-6">
+                    <?php previous_post_link('%link', '« Previous post'); ?>
+                </div>
+
+                <div class="col-6 text-end">
+                    <?php next_post_link('%link', 'Next post »'); ?>
+                </div>
+            </div>
+
+        </div><!-- /.container -->
 
 	</main>
 
