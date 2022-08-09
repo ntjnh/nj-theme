@@ -50,9 +50,18 @@ get_header();
 
             <div class="row">
                 <div class="col-12">
-                    <div class="screenshot">
-                        <img src="https://via.placeholder.com/960x960" alt="Screenshot">
+
+                    <?php $gallery = get_field('gallery');
+                    if( $gallery ): ?>
+                    <div class="project-gallery">
+                        <?php foreach( $gallery as $image ): ?>
+                            <div class="screenshot">
+                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                            </div>
+                        <?php endforeach; ?>
                     </div>
+                    <?php endif; ?>
+
                 </div>
             </div>
 
