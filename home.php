@@ -15,7 +15,6 @@
 get_header();
 
 ?>
-    <h6 style="background-color: #ffe66b; margin: 0; padding: 4px;">home.php</h6>
 	<main class="py-5">
 
 		<div class="container">
