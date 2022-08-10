@@ -32,12 +32,12 @@ get_header();
                     <p><?php echo get_field('industry'); ?></p>
 
                     <h4>Involvement</h4>
-                    <ul>
+                    <ul class="list-inline">
                         <?php 
                         $types = get_terms( 'project_type' );
                         if( ! empty( $types ) && ! is_wp_error( $types ) ) {
                             foreach( $types as $type ) {
-                                echo '<li>' . $type->name . '</li>';
+                                echo '<li class="list-inline-item"><span class="badge text-bg-info">' . $type->name . '</span></li>';
                             }
                         }
                         ?>
