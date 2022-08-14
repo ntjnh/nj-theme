@@ -69,11 +69,11 @@ get_header();
 
             <div class="row pt-3">
                 <div class="col-6">
-                    <?php previous_post_link('%link', '« Previous post'); ?>
+                    <?php previous_post_link('%link', '« Previous project'); ?>
                 </div>
 
                 <div class="col-6 text-end">
-                    <?php next_post_link('%link', 'Next post »'); ?>
+                    <?php next_post_link('%link', 'Next project »'); ?>
                 </div>
             </div>
 
