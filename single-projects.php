@@ -19,6 +19,8 @@ get_header();
 
 		<div class="container">
 
+            <?php while ( have_posts() ) : the_post(); ?>
+
             <h1 class="project-title"><?php the_title(); ?></h1>
             
             <div class="row">
@@ -33,14 +35,14 @@ get_header();
 
                     <h4>Involvement</h4>
                     <ul class="list-inline">
-                        <?php 
-                        $types = get_terms( 'project_type' );
-                        if( ! empty( $types ) && ! is_wp_error( $types ) ) {
-                            foreach( $types as $type ) {
-                                echo '<li class="list-inline-item"><span class="badge text-bg-secondary">' . $type->name . '</span></li>';
+                        <?php $terms = get_the_terms( $post->ID , 'project_type' );
+
+                        if ( $terms != null ) {
+                            foreach( $terms as $term ) {
+                                echo '<li class="list-inline-item"><span class="badge text-bg-secondary">' . $term->name . '</span></li>';
+                                unset($term); // Get rid of the other data stored in the object, since it's not needed
                             }
-                        }
-                        ?>
+                        } ?>
                     </ul>
 
                     <h4>Visit</h4>
@@ -74,6 +76,8 @@ get_header();
                     <?php next_post_link('%link', 'Next post »'); ?>
                 </div>
             </div>
+
+            <?php endwhile; ?>
 
         </div><!-- /.container -->
 
