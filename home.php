@@ -23,8 +23,6 @@ get_header();
 
             <?php if ( have_posts() ) :
 
-                query_posts('posts_per_page=3');
-
                 while ( have_posts() ) :
                     the_post();
                 ?>
