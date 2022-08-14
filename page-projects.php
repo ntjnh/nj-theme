@@ -22,7 +22,8 @@ get_header();
 
                 <?php
                 $args = array(
-                    'post_type' => array( 'projects' )
+                    'post_type' => array( 'projects' ),
+                    'posts_per_page' => -1
                 );
 
                 $the_query = new WP_Query( $args );
@@ -44,13 +45,16 @@ get_header();
                                     <?php the_title(); ?>
                                 </a>
                             </h2>
+
                             <ul class="list-inline">
-                                <?php 
-                                $types = get_terms( 'project_type' );
-                                foreach( $types as $type ) {
-                                    echo '<li class="list-inline-item">' . $type->name . '</li>';
-                                }
-                                ?>
+                                <?php $terms = get_the_terms( $post->ID , 'project_type' );
+
+                                if ( $terms != null ) {
+                                    foreach( $terms as $term ) {
+                                        echo '<li class="list-inline-item"><span class="badge text-bg-secondary">' . $term->name . '</span></li>';
+                                        unset($term); // Get rid of the other data stored in the object, since it's not needed
+                                    }
+                                } ?>
                             </ul>
 
                             <?php $description = get_field('description'); ?>
