@@ -12,11 +12,11 @@ get_header();
 	<main class="page-projects py-5">
 
 		<div class="container">
-            <header class="page-header">
+            <header class="page-header m-0">
                 <h1><?php the_title(); ?></h1>
             </header>
 
-            <div class="grid row gy-4">
+            <div class="grid mt-4 row gy-4">
 
                 <div class="grid-sizer col-12 col-md-6"></div>
 
@@ -33,7 +33,7 @@ get_header();
 
                 ?>
 
-                    <article class="project grid-item col-12 col-md-6">
+                    <article class="project grid-item col-12 col-md-6 mt-0 mb-5">
 
                         <div class="grid-item-content">
                             <a href="<?php the_permalink(); ?>">
