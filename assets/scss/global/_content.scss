@@ -77,6 +77,19 @@ section:not(.about) h2 {
     }
 }
 
+// 404 template
+.error404 {
+    @media (min-height: 646px) {
+        min-height: 100vh;
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+}
+
 // Overrides
 .container,
 .container-lg,
