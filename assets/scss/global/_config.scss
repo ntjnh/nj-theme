@@ -1,18 +1,17 @@
 // Colours
-$black: $primary;
+$black: #222;
 $blue: #0052bd;
 $cyan: #0ac2c9;
 $red: #cf2727;
 $white: #fff;
-$yellow: $secondary;
+$yellow: #ffe66b;
 
 //
 // Typography
 //
 
 // Fonts
-$heading-font: 'DM Serif Display', serif;
-$body-font: 'Lato', sans-serif;
+$primary-font: 'bely', 'Merriweather', serif;
 
 // Font Weights
 $fw-light: 300;
@@ -22,9 +21,15 @@ $fw-bold: 700;
 $fw-black: 900;
 
 // Font Sizes
-$text-xs: 14px;
-$text-s: 16px;
-$text-m: 18px;
-$text-l: 24px;
-$text-xl: 32px;
-$text-xxl: 48px;
+$text-xs: .875rem;
+$text-s: 1rem;
+$text-m: 1.125rem;
+$text-l: 1.5rem;
+$text-xl: 2rem;
+$text-xxl: 3rem;
+
+body {
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: $fw-reg;
+}

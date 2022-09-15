@@ -32,28 +32,18 @@
         
         <div class="container">
 
-            <div class="row">
-                <div class=" logo-col col-12 col-md-4">
-    
-                    <div class="title">
-                        <a href="<?php echo get_bloginfo('url'); ?>">Nate</a>
-                    </div>
-            
-                </div>
-    
-                <div class="nav-col col-12 col-md-8">
-    
-                    <?php 
-                        wp_nav_menu(
-                            array(
-                                'theme_location' => 'main-menu',
-                                'menu_id' => 'main-nav'
-                            )
-                        );
-                    ?>
-    
-                </div>
+            <div class="title">
+                <a href="<?php echo get_bloginfo('url'); ?>">Nate</a>
             </div>
+
+            <?php 
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'main-menu',
+                        'menu_id' => 'main-nav'
+                    )
+                );
+            ?>
 
         </div>
 

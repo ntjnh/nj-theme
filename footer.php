@@ -16,11 +16,6 @@
 
             <ul class="social-icons">
                 <li>
-                    <a href="https://twitter.com/natejonah" target="_blank">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
                     <a href="https://github.com/ntjnh" target="_blank">
                         <i class="fab fa-github" aria-hidden="true"></i>
                     </a>
@@ -32,7 +27,7 @@
                 </li>
             </ul>
 
-            <p class="d-inline-block small">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?></p>
+            <p class="copyright">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?></p>
 
         </div>
     </footer>

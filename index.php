@@ -9,13 +9,12 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package natejonah
+ * @package nate
  */
 
 get_header();
 
 ?>
-    <h6 style="background-color: #ffe66b; margin: 0; padding: 4px;">index.php</h6>
 	<main class="py-5">
 
 		<div class="container">

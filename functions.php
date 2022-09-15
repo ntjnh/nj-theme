@@ -1,14 +1,14 @@
 <?php
 /**
- * natejonah functions and definitions
+ * nate functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package natejonah
+ * @package nate
  */
 
 if ( ! defined( 'NATE_VERSION' ) ) {
-	define( 'NATE_VERSION', '1.0.0' );
+	define( 'NATE_VERSION', '2.0.0' );
 }
 
 function nate_setup() {
@@ -20,7 +20,7 @@ function nate_setup() {
     // Menus
 	register_nav_menus(
 		array(
-			'main-menu' => esc_html__( 'Primary', 'natejonah' ),
+			'main-menu' => esc_html__( 'Primary', 'nate' ),
 		)
 	);
 }
@@ -29,7 +29,8 @@ add_action( 'after_setup_theme', 'nate_setup' );
 
 // Enqueue scripts and styles.
 function nate_scripts() {
-    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato:wght@300;400;700&display=swap', array(), false, 'all' );	
+    wp_enqueue_style( 'adobe-fonts', 'https://use.typekit.net/xop5aup.css', array(), false, 'all' );	
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap', array(), false, 'all' );	
     wp_enqueue_style( 'nate-style', get_template_directory_uri() . '/build/css/app.css', array(), NATE_VERSION, 'all' );	
 
 	wp_enqueue_script( 'fontawesome', 'https://kit.fontawesome.com/6e2ccb04f1.js?ver=5.15.3', array(), '5.15.3', false );
@@ -47,16 +48,16 @@ function project_cpt() {
             'labels' => array(
                 'name' => __( 'Projects' ),
                 'singular_name' => __( 'Project' ),
-				'name'                => _x( 'Projects', 'Post Type General Name', 'natejonah' ),
-				'singular_name'       => _x( 'Project', 'Post Type Singular Name', 'natejonah' ),
-				'menu_name'           => __( 'Projects', 'natejonah' ),
-				'parent_item_colon'   => __( 'Parent Project', 'natejonah' ),
-				'all_items'           => __( 'All Projects', 'natejonah' ),
-				'view_item'           => __( 'View Project', 'natejonah' ),
-				'add_new_item'        => __( 'Add New Project', 'natejonah' ),
-				'edit_item'           => __( 'Edit Project', 'natejonah' ),
-				'update_item'         => __( 'Update Project', 'natejonah' ),
-				'search_items'        => __( 'Search Project', 'natejonah' ),
+				'name'                => _x( 'Projects', 'Post Type General Name', 'nate' ),
+				'singular_name'       => _x( 'Project', 'Post Type Singular Name', 'nate' ),
+				'menu_name'           => __( 'Projects', 'nate' ),
+				'parent_item_colon'   => __( 'Parent Project', 'nate' ),
+				'all_items'           => __( 'All Projects', 'nate' ),
+				'view_item'           => __( 'View Project', 'nate' ),
+				'add_new_item'        => __( 'Add New Project', 'nate' ),
+				'edit_item'           => __( 'Edit Project', 'nate' ),
+				'update_item'         => __( 'Update Project', 'nate' ),
+				'search_items'        => __( 'Search Project', 'nate' ),
             ),
             'public' => true,
             'has_archive' => false,
@@ -64,8 +65,7 @@ function project_cpt() {
             'show_in_rest' => false,
 			'menu_icon' => 'dashicons-portfolio',
 			'hierarchical' => false,
-			'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
-			'taxonomies' => array( 'project_type' ),
+			'supports' => array( 'title', 'editor', 'thumbnail', 'revisions', 'custom-fields' ),
 			'show_ui'             => true,
 			'show_in_menu'        => true,
 			'show_in_nav_menus'   => false,
@@ -78,36 +78,3 @@ function project_cpt() {
 }
 
 add_action( 'init', 'project_cpt' );
-
-// Project Type custom taxonomy
-add_action( 'init', 'project_type_taxonomy', 0 );
- 
-function project_type_taxonomy() { 
-	$labels = array(
-		'name' => _x( 'Project Types', 'taxonomy general name' ),
-		'singular_name' => _x( 'Project Type', 'taxonomy singular name' ),
-		'search_items' =>  __( 'Search Project Types' ),
-		'popular_items' => __( 'Popular Project Types' ),
-		'all_items' => __( 'All Project Types' ),
-		'parent_item' => null,
-		'parent_item_colon' => null,
-		'edit_item' => __( 'Edit Project Type' ), 
-		'update_item' => __( 'Update Project Type' ),
-		'add_new_item' => __( 'Add New Project Type' ),
-		'new_item_name' => __( 'New Project Type Name' ),
-		'separate_items_with_commas' => __( 'Separate project types with commas' ),
-		'add_or_remove_items' => __( 'Add or remove project types' ),
-		'choose_from_most_used' => __( 'Choose from the most used project types' ),
-		'menu_name' => __( 'Project Types' ),
-	);
-
-	register_taxonomy('project_type', 'projects', array(
-		'hierarchical' => true,
-		'labels' => $labels,
-		'show_ui' => true,
-		'show_in_rest' => false,
-		'show_admin_column' => true,
-		'query_var' => true,
-		'rewrite' => array( 'slug' => 'project-type' ),
-	));
-}
