@@ -27,20 +27,3 @@ $text-m: 1.125rem;
 $text-l: 1.5rem;
 $text-xl: 2rem;
 $text-xxl: 3rem;
-
-// Grid
-$grid-breakpoints: (
-    mob: 576px,
-    tabp: 768px,
-    tabl: 992px,
-    lap: 1200px,
-    desk: 1400px
-);
-
-$container-widths: (
-    sm: 540px,
-    md: 720px,
-    lg: 960px,
-    xl: 1140px,
-    xxl: 1320px
-);
