@@ -1,0 +1,41 @@
+.header {
+    &__title {
+        color: $primary;
+        display: block;
+        font-size: 4rem;
+        letter-spacing: -4px;
+        line-height: 1;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    // Nav
+    .menu-primary-container {
+        ul {
+            margin: 0;
+            padding: 0;
+            text-align: right;
+
+            li {
+                display: inline-block;
+                list-style: none;
+
+                @include media-breakpoint-up(md) {
+                    margin-left: 2rem;
+                }
+
+                a {
+                    display: inline-block;
+                    font-size: 1.75rem;
+                    line-height: 1.22;
+                    padding: .75rem 0;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
