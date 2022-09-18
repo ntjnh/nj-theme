@@ -15,7 +15,7 @@
 get_header();
 
 ?>
-	<main class="py-5">
+	<main class="">
 
 		<div class="container">
 
