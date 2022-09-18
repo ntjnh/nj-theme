@@ -4,6 +4,7 @@
 
 body {
     font-family: $primary-font;
+    font-size: $text-m;
     font-style: normal;
     font-weight: $fw-reg;
     margin: 0;
@@ -20,11 +21,11 @@ h6 {
 }
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+    @include media-breakpoint-up(lg) {
+        max-width: 82.5%;
+    }
 
-    @include breakpoint(tabl) {
-        max-width: 69%;
+    @include media-breakpoint-up(xxxl) {
+        max-width: 1280px;
     }
 }
