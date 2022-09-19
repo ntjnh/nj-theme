@@ -28,16 +28,18 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <header class="header py-5">
+    <header class="header py-4 py-md-5">
         
         <div class="container">
 
             <div class="row">
                 <div class="col-12 col-sm-3">
-                    <a class="header__title" href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo('title'); ?></a>
+                    <h1 class="header__title">
+                        <a href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo('title'); ?></a>
+                    </h1>
                 </div>
 
-                <div class="col-12 col-sm-9">
+                <div class="col-12 col-sm-9 header__nav-col">
                     <?php 
                         wp_nav_menu(
                             array(

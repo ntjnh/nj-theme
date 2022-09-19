@@ -11,28 +11,28 @@
 
 ?>
 
-    <footer class="footer">
+    <footer class="footer pt-5 pb-3">
 
         <div class="container">
 
             <div class="row">
-                <div class="col-12 col-sm-6">
-                    <ul class="social-icons">
-                        <li>
-                            <a href="https://github.com/ntjnh" target="_blank">
+                <div class="col-6">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link" href="https://github.com/ntjnh" target="_blank">
                                 <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/nate-manyande/" target="_blank">
+                        <li class="social__item">
+                            <a class="social__link" href="https://www.linkedin.com/in/nate-manyande/" target="_blank">
                                 <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                             </a>
                         </li>
                     </ul>
                 </div>
 
-                <div class="col-12 col-sm-6">
-                    <p class="copyright text-end">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?>.</p>
+                <div class="col-6">
+                    <p class="footer__copyright m-0 text-end">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?>.</p>
                 </div>
             </div>
 
