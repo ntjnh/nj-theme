@@ -15,38 +15,42 @@
 get_header();
 
 ?>
-	<main class="">
+	<main class="page-projects">
 
 		<div class="container">
 
-            <?php
-                $args = array(
-                    'post_type' => array( 'projects' ),
-                    'posts_per_page' => -1
-                );
+            <div class="row gx-5">
 
-                $the_query = new WP_Query( $args );
+                <?php
+                    $args = array(
+                        'post_type' => array( 'projects' ),
+                        'posts_per_page' => -1
+                    );
 
-                while ( $the_query->have_posts() ) :
-                    $the_query->the_post();
+                    $the_query = new WP_Query( $args );
 
-            ?>
+                    while ( $the_query->have_posts() ) :
+                        $the_query->the_post();
 
-            <article class="project">
+                ?>
 
-                <a href="<?php the_permalink(); ?>">
-                    <img class="project__img" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                <article class="col-6 project">
 
-                    <h2 class="project__title"><?php the_title(); ?></h2>
-                </a>
+                    <a class="project__link" href="<?php the_permalink(); ?>">
+                        <img class="project__img mw-100" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
 
-            </article>
+                        <h2 class="project__title"><?php the_title(); ?></h2>
+                    </a>
 
-            <?php		
-                endwhile;
+                </article>
 
-                wp_reset_postdata();
-            ?>
+                <?php		
+                    endwhile;
+
+                    wp_reset_postdata();
+                ?>
+
+            </div>
 
         </div>
 
