@@ -62,12 +62,11 @@ $gallery = get_field('gallery');
                     </div>
                 </div>
 
-
                 <?php if( $gallery ): ?>
-                <div class="">
+                <div class="mt-5">
                     <?php foreach( $gallery as $image ): ?>
-                        <div class="">
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                        <div class="mb-3">
+                            <img class="mw-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
                         </div>
                     <?php endforeach; ?>
                 </div>
