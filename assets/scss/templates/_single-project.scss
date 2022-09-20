@@ -1,0 +1,12 @@
+.page-single-project {
+    .project {
+        &__info {
+            font-size: $text-m;
+            font-weight: $fw-reg;
+        }
+
+        &__website {
+            display: inline-block;
+        }
+    }
+}

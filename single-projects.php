@@ -22,33 +22,43 @@ $visit = get_field('visit');
 $gallery = get_field('gallery');
 
 ?>
-	<main class="">
+	<main class="page-single-project">
 
-		<div class="container">
+		<div class="container project">
 
             <?php while ( have_posts() ) : the_post(); ?>
 
-                <h1 class=""><?php the_title(); ?></h1>
+                <h1 class="project__title"><?php the_title(); ?></h1>
                 
-                <div class="">
-                    <div class="">
-                        <div>
+                <div class="row">
+                    <div class="col-12 col-md-9">
+                        <div class="project__summary">
                             <?php echo $summary; ?>
                         </div>
                     </div>
 
-                    <div class="">
-                        <h4>Website Type</h4>
-                        <p><?php echo $website_type; ?></p>
+                    <div class="col-12 col-md-3">
+                        <div class="d-inline-block float-end h-100">
+                            <div class="d-flex flex-wrap flex-column justify-content-between h-100">
 
-                        <h4>Involvement</h4>
-                        <p><?php echo $involvement; ?></p>
+                                <div>
+                                    <h4 class="project__info">
+                                        <span class="text-bold">Website Type:</span> <?php echo $website_type; ?>
+                                    </h4>
+    
+                                    <h4 class="project__info">
+                                        <span class="text-bold">Involvement:</span> <?php echo $involvement; ?>
+                                    </h4>
+    
+                                    <h4 class="project__info">
+                                        <span class="text-bold">Platform:</span> <?php echo $platform; ?>
+                                    </h4>
+                                </div>
+    
+                                <a class="project__website" href="<?php echo $visit['url']; ?>" target="_blank">Visit the website</a>
 
-                        <h4>Platform</h4>
-                        <p><?php echo $platform; ?></p>
-
-                        <h4>Visit</h4>
-                        <a href="<?php echo $visit['url']; ?>" target="_blank"><?php echo $visit['title']; ?></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
