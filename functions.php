@@ -78,3 +78,6 @@ function project_cpt() {
 }
 
 add_action( 'init', 'project_cpt' );
+
+// Disable scaling down of large images
+add_filter( 'big_image_size_threshold', '__return_false' );
