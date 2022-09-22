@@ -40,7 +40,14 @@
                     @include media-breakpoint-up(md) {
                         margin-left: 2rem;
                     }
-    
+
+                    &.current-menu-item {
+                        a {
+                            color: $blue;
+                            text-decoration: underline;
+                        }
+                    }
+
                     a {
                         display: inline-block;
                         font-size: 1.25rem;
@@ -54,6 +61,7 @@
                         }
     
                         &:hover {
+                            color: $blue;
                             text-decoration: underline;
                         }
                     }

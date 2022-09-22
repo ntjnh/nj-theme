@@ -9,6 +9,7 @@
             display: inline-block;
 
             &:hover {
+                color: $blue;
                 text-decoration: none;
             }
         }
