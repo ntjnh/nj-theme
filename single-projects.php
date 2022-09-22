@@ -14,68 +14,61 @@
 
 get_header();
 
-?>
-	<main class="py-5">
+$summary = get_field('summary');
+$website_type = get_field('website_type');
+$involvement = get_field('involvement');
+$platform = get_field('platform');
+$visit = get_field('visit');
+$gallery = get_field('gallery');
 
-		<div class="container">
+?>
+	<main class="page-single-project">
+
+		<div class="container project">
 
             <?php while ( have_posts() ) : the_post(); ?>
 
-            <h1 class="project-title"><?php the_title(); ?></h1>
-            
-            <div class="row">
-                <div class="col-12 col-md-9">
-                    <div>
-                        <?php echo get_field('summary'); ?>
+                <h1 class="project__title"><?php the_title(); ?></h1>
+                
+                <div class="row">
+                    <div class="col-12 col-md-9 order-2 order-md-1">
+                        <div class="project__summary">
+                            <?php echo $summary; ?>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-3">
-                    <h4>Website Type</h4>
-                    <p><?php echo get_field('industry'); ?></p>
 
-                    <h4>Involvement</h4>
-                    <ul class="list-inline">
-                        <?php $terms = get_the_terms( $post->ID , 'project_type' );
+                    <div class="col-12 col-md-3 order-1 order-md-2 mb-4 mb-md-0">
+                        <div class="d-md-inline-block float-md-end h-100">
+                            <div class="text-center text-md-start">
 
-                        if ( $terms != null ) {
-                            foreach( $terms as $term ) {
-                                echo '<li class="list-inline-item"><span class="badge text-bg-secondary">' . $term->name . '</span></li>';
-                                unset($term); // Get rid of the other data stored in the object, since it's not needed
-                            }
-                        } ?>
-                    </ul>
+                                <h4 class="project__info">
+                                    <span class="text-bold">Website Type:</span> <?php echo $website_type; ?>
+                                </h4>
 
-                    <h4>Visit</h4>
-                    <a href="<?php echo get_field('visit')['url']; ?>" target="_blank"><?php echo get_field('visit')['title']; ?></a>
-                </div>
-            </div>
+                                <h4 class="project__info">
+                                    <span class="text-bold">Involvement:</span> <?php echo $involvement; ?>
+                                </h4>
 
-            <div class="row">
-                <div class="col-12">
+                                <h4 class="project__info">
+                                    <span class="text-bold">Platform:</span> <?php echo $platform; ?>
+                                </h4>
+    
+                                <a class="project__website" href="<?php echo $visit['url']; ?>" target="_blank">Visit the website</a>
 
-                    <?php $gallery = get_field('gallery');
-                    if( $gallery ): ?>
-                    <div class="project-gallery">
-                        <?php foreach( $gallery as $image ): ?>
-                            <div class="screenshot">
-                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
                             </div>
-                        <?php endforeach; ?>
+                        </div>
                     </div>
-                    <?php endif; ?>
-
-                </div>
-            </div>
-
-            <div class="row pt-3">
-                <div class="col-6">
-                    <?php previous_post_link('%link', '« Previous project'); ?>
                 </div>
 
-                <div class="col-6 text-end">
-                    <?php next_post_link('%link', 'Next project »'); ?>
+                <?php if( $gallery ): ?>
+                <div class="mt-5">
+                    <?php foreach( $gallery as $image ): ?>
+                        <div class="mb-3">
+                            <img class="mw-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-            </div>
+                <?php endif; ?>
 
             <?php endwhile; ?>
 

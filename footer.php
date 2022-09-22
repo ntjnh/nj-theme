@@ -11,30 +11,33 @@
 
 ?>
 
-    <footer class="footer">
+    <footer class="footer py-3 pt-md-5">
+
         <div class="container">
 
-            <ul class="social-icons">
-                <li>
-                    <a href="https://twitter.com/natejonah" target="_blank">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/ntjnh" target="_blank">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/nate-manyande/" target="_blank">
-                        <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                    </a>
-                </li>
-            </ul>
+            <div class="row">
+                <div class="col-6">
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link" href="https://github.com/ntjnh" target="_blank">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="https://www.linkedin.com/in/nate-manyande/" target="_blank">
+                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-            <p class="d-inline-block small">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?></p>
+                <div class="col-6">
+                    <p class="footer__copyright m-0 text-end">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?>.</p>
+                </div>
+            </div>
 
         </div>
+
     </footer>
 
     <?php wp_footer(); ?>

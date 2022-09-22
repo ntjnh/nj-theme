@@ -1,63 +1,70 @@
 .header {
-    background-color: $black;
-    border-bottom: 1px solid $white;
-    color: $white;
-    padding: 32px 0;
-
-    .row .logo-col,
-    .row .nav-col  {
-        display: flex;
-        align-items: center;
-    }
-
-    .row .nav-col {
-        justify-content: end;
-    }
-
-    .title {
-        color: $white;
-        font-family: $heading-font;
-        font-size: calc(1.375rem + 1.5vw);
-        letter-spacing: .125rem;
+    &__title {
+        color: $primary;
+        display: block;
+        font-size: 4rem;
+        font-weight: $fw-reg;
+        letter-spacing: -4px;
         line-height: 1;
         margin: 0;
+        text-align: center;
         text-transform: uppercase;
 
-        @include media-breakpoint-up(xl) {
-            font-size: 2.5rem;
+        @include media-breakpoint-up(md) {
+            text-align: left;
         }
-        
+
         a {
-            color: $white;
             text-decoration: none;
         }
     }
 
-    .menu {
+    &__nav-col {
+        align-items: center;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: end;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        &-item {
-            display: inline-block;
-
-            a {
-                color: $white;
-                line-height: 1;
-                padding: 0.5rem 1rem;
-                text-decoration: none;
+        justify-content: center;
         
-                &:hover {
-                    color: $yellow;
-                }
-            }
+        @include media-breakpoint-up(md) {
+            justify-content: end;
+        }
 
-            &:last-of-type {
-                a {
-                    padding-right: 0;
+        .menu-primary-container {
+            ul {
+                margin: 0;
+                padding: 0;
+    
+                li {
+                    display: inline-block;
+                    list-style: none;
+    
+                    @include media-breakpoint-up(md) {
+                        margin-left: 2rem;
+                    }
+
+                    &.current-menu-item {
+                        a {
+                            color: $blue;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    a {
+                        display: inline-block;
+                        font-size: 1.25rem;
+                        line-height: 1.22;
+                        padding: .75rem;
+                        text-decoration: none;
+    
+                        @include media-breakpoint-up(md) {
+                            font-size: 1.5rem;
+                            padding: .75rem 0;
+                        }
+    
+                        &:hover {
+                            color: $blue;
+                            text-decoration: underline;
+                        }
+                    }
                 }
             }
         }

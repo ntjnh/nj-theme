@@ -28,21 +28,18 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <header class="header">
+    <header class="header py-4 py-md-5">
         
         <div class="container">
 
             <div class="row">
-                <div class=" logo-col col-12 col-md-4">
-    
-                    <div class="title">
-                        <a href="<?php echo get_bloginfo('url'); ?>">Nate</a>
-                    </div>
-            
+                <div class="col-12 col-sm-3">
+                    <h1 class="header__title">
+                        <a href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo('title'); ?></a>
+                    </h1>
                 </div>
-    
-                <div class="nav-col col-12 col-md-8">
-    
+
+                <div class="col-12 col-sm-9 header__nav-col">
                     <?php 
                         wp_nav_menu(
                             array(
@@ -51,7 +48,6 @@
                             )
                         );
                     ?>
-    
                 </div>
             </div>
 
