@@ -1,8 +1,18 @@
 .page-single-project {
     .project {
+        &__title {
+            margin-bottom: 1.5rem;
+            text-align: center;
+
+            @include media-breakpoint-up(md) {
+                text-align: left;
+            }
+        }
+
         &__info {
             font-size: $text-m;
             font-weight: $fw-reg;
+            margin-bottom: 1rem;
         }
 
         &__website {

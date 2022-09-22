@@ -31,29 +31,27 @@ $gallery = get_field('gallery');
                 <h1 class="project__title"><?php the_title(); ?></h1>
                 
                 <div class="row">
-                    <div class="col-12 col-md-9">
+                    <div class="col-12 col-md-9 order-2 order-md-1">
                         <div class="project__summary">
                             <?php echo $summary; ?>
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-3">
-                        <div class="d-inline-block float-end h-100">
-                            <div class="d-flex flex-wrap flex-column justify-content-between h-100">
+                    <div class="col-12 col-md-3 order-1 order-md-2 mb-4 mb-md-0">
+                        <div class="d-md-inline-block float-md-end h-100">
+                            <div class="text-center text-md-start">
 
-                                <div>
-                                    <h4 class="project__info">
-                                        <span class="text-bold">Website Type:</span> <?php echo $website_type; ?>
-                                    </h4>
-    
-                                    <h4 class="project__info">
-                                        <span class="text-bold">Involvement:</span> <?php echo $involvement; ?>
-                                    </h4>
-    
-                                    <h4 class="project__info">
-                                        <span class="text-bold">Platform:</span> <?php echo $platform; ?>
-                                    </h4>
-                                </div>
+                                <h4 class="project__info">
+                                    <span class="text-bold">Website Type:</span> <?php echo $website_type; ?>
+                                </h4>
+
+                                <h4 class="project__info">
+                                    <span class="text-bold">Involvement:</span> <?php echo $involvement; ?>
+                                </h4>
+
+                                <h4 class="project__info">
+                                    <span class="text-bold">Platform:</span> <?php echo $platform; ?>
+                                </h4>
     
                                 <a class="project__website" href="<?php echo $visit['url']; ?>" target="_blank">Visit the website</a>
 
