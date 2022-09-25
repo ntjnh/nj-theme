@@ -11,7 +11,7 @@
 
 ?>
 
-    <footer class="footer py-3 pt-md-5">
+    <footer class="footer pb-4 pt-5">
 
         <div class="container">
 
