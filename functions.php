@@ -17,6 +17,13 @@ function nate_setup() {
 
     add_theme_support( 'post-thumbnails' );
 
+	// Additional image sizes
+	add_image_size( 'photo-small', 492, 277, true );
+	add_image_size( 'photo-medium', 696, 392, true );
+	add_image_size( 'photo-large', 389, 219, true );
+	add_image_size( 'photo-xlarge', 558, 314, true );
+	add_image_size( 'photo-xxlarge', 604, 340, true );
+
     // Menus
 	register_nav_menus(
 		array(
