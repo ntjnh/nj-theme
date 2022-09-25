@@ -33,7 +33,7 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-12 col-sm-3">
+                <div class="col-12 col-sm-3 mb-3 mb-sm-0">
                     <h1 class="header__title">
                         <a href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo('title'); ?></a>
                     </h1>
