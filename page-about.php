@@ -56,7 +56,7 @@ $photo_b = get_field('photo_b');
                             <source media="(max-width: 1199px)" srcset="<?php echo $photo['sizes']['photo-large']; ?>" />
                             <source media="(max-width: 1499px)" srcset="<?php echo $photo['sizes']['photo-xlarge']; ?>" />
                             <source media="(min-width: 1500px)" srcset="<?php echo $photo['sizes']['photo-xxlarge']; ?>" />
-                            <img class="mw-100" src="<?php echo $photo['sizes']['photo-medium']; ?>" alt="Photo of Nate" />
+                            <img class="mw-100" src="<?php echo $photo['sizes']['photo-medium']; ?>" alt="<?php echo $photo['alt']; ?>" />
                         </picture>
                     </div>
 
@@ -68,7 +68,7 @@ $photo_b = get_field('photo_b');
                             <source media="(max-width: 1199px)" srcset="<?php echo $photo_b['sizes']['photo-large']; ?>" />
                             <source media="(max-width: 1499px)" srcset="<?php echo $photo_b['sizes']['photo-xlarge']; ?>" />
                             <source media="(min-width: 1500px)" srcset="<?php echo $photo_b['sizes']['photo-xxlarge']; ?>" />
-                            <img class="mw-100" src="<?php echo $photo_b['sizes']['photo-medium']; ?>" alt="Photo of Nate" />
+                            <img class="mw-100" src="<?php echo $photo_b['sizes']['photo-medium']; ?>" alt="<?php echo $photo_b['alt']; ?>" />
                         </picture>
                     </div>
                 </div>
