@@ -53,7 +53,7 @@ $gallery = get_field('gallery');
                                     <span class="text-bold">Platform:</span> <?php echo $platform; ?>
                                 </h4>
     
-                                <a class="project__website" href="<?php echo $visit['url']; ?>" target="_blank">Visit the website</a>
+                                <a class="project__website" href="<?php echo $visit['url']; ?>" target="_blank" rel="noreferrer">Visit the website</a>
 
                             </div>
                         </div>
