@@ -55,6 +55,8 @@ $gallery = get_field('gallery');
     
                                 <a class="project__website" href="<?php echo $visit['url']; ?>" target="_blank" rel="noreferrer">Visit the website</a>
 
+                                <p class="project__smallprint"><em>I worked on this project while employed by DS.Emotion. I'm not a freelancer.</em></p>
+
                             </div>
                         </div>
                     </div>
