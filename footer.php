@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="col-6">
-                    <p class="footer__copyright m-0 text-end">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?>.</p>
+                    <p class="footer__copyright m-0 text-end">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?></p>
                 </div>
             </div>
 
