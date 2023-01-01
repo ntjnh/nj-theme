@@ -12,7 +12,6 @@ if ( ! defined( 'NATE_VERSION' ) ) {
 }
 
 function nate_setup() {
-
     add_theme_support( 'title-tag' );
 
     add_theme_support( 'post-thumbnails' );
@@ -48,7 +47,13 @@ function nate_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'nate_scripts' );
 
+// Disable scaling down of large images
+add_filter( 'big_image_size_threshold', '__return_false' );
+
+//
 // Projects custom post type
+//
+
 function project_cpt() {
     register_post_type( 'projects',
         array(
@@ -68,7 +73,7 @@ function project_cpt() {
             ),
             'public' => true,
             'has_archive' => false,
-            'rewrite' => array('slug' => 'projects'),
+            'rewrite' => array( 'slug' => 'projects' ),
             'show_in_rest' => false,
 			'menu_icon' => 'dashicons-portfolio',
 			'hierarchical' => false,
@@ -86,5 +91,34 @@ function project_cpt() {
 
 add_action( 'init', 'project_cpt' );
 
-// Disable scaling down of large images
-add_filter( 'big_image_size_threshold', '__return_false' );
+//
+// Custom taxonomy for Projects CPT
+//
+function project_taxonomy() {    
+    register_taxonomy( 'project-categories',
+        array( 'projects' ),
+        array(
+            'labels' => array(
+                'name' => _x( 'Project Categories', 'Taxonomy General name' ),
+                'singular_name' => _x( 'Project Category', 'Taxonomy Singular name' ),
+                'search_items' =>  __( 'Search Project Categories' ),
+                'all_items' => __( 'All Project Categories' ),
+                'parent_item' => __( 'Parent Project Category' ),
+                'parent_item_colon' => __( 'Parent Project Category:' ),
+                'edit_item' => __( 'Edit Project Category' ), 
+                'update_item' => __( 'Update Project Category' ),
+                'add_new_item' => __( 'Add New Project Category' ),
+                'new_item_name' => __( 'New Project Category Name' ),
+                'menu_name' => __( 'Project Categories' ),
+            ),
+            'hierarchical' => true,
+            'show_ui' => true,
+            'show_in_rest' => true,
+            'show_admin_column' => true,
+            'query_var' => true,
+            'rewrite' => array( 'slug' => 'project-category' ),
+        )
+    );
+}
+  
+add_action( 'init', 'project_taxonomy', 0 );
