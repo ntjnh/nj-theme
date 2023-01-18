@@ -17,14 +17,14 @@
 
             <div class="row">
                 <div class="col-6">
-                    <ul class="social">
-                        <li class="social__item">
-                            <a class="social__link" href="https://github.com/ntjnh" target="_blank">
+                    <ul class="social leading-none m-0 p-0">
+                        <li class="social__item leading-none inline-block text-2xl list-none mr-2">
+                            <a class="social__link hover:text-blue" href="https://github.com/ntjnh" target="_blank">
                                 <i class="fab fa-github" aria-hidden="true"></i>
                             </a>
                         </li>
-                        <li class="social__item">
-                            <a class="social__link" href="https://www.linkedin.com/in/nate-manyande/" target="_blank">
+                        <li class="social__item leading-none inline-block text-2xl list-none">
+                            <a class="social__link hover:text-blue" href="https://www.linkedin.com/in/nate-manyande/" target="_blank">
                                 <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                             </a>
                         </li>
@@ -32,7 +32,7 @@
                 </div>
 
                 <div class="col-6">
-                    <p class="footer__copyright m-0 text-end">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?></p>
+                    <p class="footer__copyright m-0 text-right">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?></p>
                 </div>
             </div>
 
