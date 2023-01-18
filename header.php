@@ -34,8 +34,8 @@
 
             <div class="row">
                 <div class="col-12 col-sm-3 mb-3 mb-sm-0">
-                    <h1 class="header__title">
-                        <a href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo('title'); ?></a>
+                    <h1 class="header__title block font-normal leading-none m-0 md:text-left text-6xl text-black text-center tracking-tighter uppercase">
+                        <a class="no-underline" href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo('title'); ?></a>
                     </h1>
                 </div>
 

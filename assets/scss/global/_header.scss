@@ -1,24 +1,4 @@
 .header {
-    &__title {
-        color: $black;
-        display: block;
-        font-size: 4rem;
-        font-weight: $fw-reg;
-        letter-spacing: -4px;
-        line-height: 1;
-        margin: 0;
-        text-align: center;
-        text-transform: uppercase;
-
-        @media (min-width: 768px) {
-            text-align: left;
-        }
-
-        a {
-            text-decoration: none;
-        }
-    }
-
     &__nav-col {
         align-items: center;
         display: flex;
