@@ -74,7 +74,10 @@ function project_cpt() {
             ),
             'public' => true,
             'has_archive' => false,
-            'rewrite' => array( 'slug' => 'projects' ),
+            'rewrite' => array(
+                'slug' => 'projects',
+                'with_front' => false
+            ),
             'show_in_rest' => false,
 			'menu_icon' => 'dashicons-portfolio',
 			'hierarchical' => false,
@@ -117,7 +120,10 @@ function project_taxonomy() {
             'show_in_rest' => true,
             'show_admin_column' => true,
             'query_var' => true,
-            'rewrite' => array( 'slug' => 'project-category' ),
+            'rewrite' => array(
+                'slug' => 'project-category',
+                'with_front' => false
+            ),
         )
     );
 }
