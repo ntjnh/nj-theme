@@ -70,6 +70,7 @@ gulp.task('serve', function (done) {
 
     gulp.watch(paths.scripts.src).on("change", gulp.series(scripts, browserSync.reload));
     gulp.watch('assets/scss/**/*.scss', gulp.series(styles, css));
+    gulp.watch(paths.styles.cssSrc).on("change", gulp.series(css, browserSync.reload));
     gulp.watch("*.php").on("change", gulp.series(css, browserSync.reload));
 
     done();
