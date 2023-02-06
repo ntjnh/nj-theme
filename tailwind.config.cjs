@@ -28,6 +28,9 @@ module.exports = {
             blue: '#0052bd',
             yellow: '#fde66b'
         },
+        container: {
+            center: true,
+        },
         extend: {},
     },
     plugins: [],
