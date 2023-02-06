@@ -28,7 +28,7 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
-    <header class="header py-4 md:py-5">
+    <header class="header py-6 md:py-12">
         
         <div class="container mx-auto">
 
