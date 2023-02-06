@@ -15,22 +15,22 @@
 get_header();
 
 ?>
-	<main class="pb-5">
+	<main class="font-serif text-lg pb-5">
         
         <div class="container">
-            <header class="entry-header mb-4">
-                <h2 class="h1 entry-title"><?php esc_html_e( 'Page Not Found', 'goal' ); ?></h2>
+            <header class="entry-header mb-6">
+                <h2 class="font-bold text-4xl"><?php esc_html_e( 'Page Not Found', 'goal' ); ?></h2>
             </header>
 
             <div>
-				<p>Sorry but the page you're looking for can't be found. It may have been removed, renamed, or is temporarily unavailable.</p>
+				<p class="mb-4">Sorry but the page you're looking for can't be found. It may have been removed, renamed, or is temporarily unavailable.</p>
 
-				<p>You could try:</p>
+				<p class="mb-4">You could try:</p>
 
-				<ul>
+				<ul class="list-disc pl-8">
 					<li>Double-checking your spelling</li>
-					<li>Going back to the <a href="<?php echo get_bloginfo('url'); ?>">homepage</a></li>
-					<li><a href="javascript:history.back()">Going back</a> to the page you came from</li>
+					<li>Going back to the <a class="underline" href="<?php echo get_bloginfo('url'); ?>">homepage</a></li>
+					<li><a class="underline" href="javascript:history.back()">Going back</a> to the page you came from</li>
 				</ul>
 			</div>
 
