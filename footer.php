@@ -31,8 +31,19 @@
                     </ul>
                 </div>
 
-                <div class="w-full sm:w-6/12">
-                    <p class="m-0 text-right">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?></p>
+                <div class="flex flex-nowrap items-center justify-end w-full sm:w-6/12">
+                    <?php 
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'footer-menu',
+                                'menu_id' => 'footer-nav',
+                                'container' => 'div',
+                                'container_class' => 'footer-nav'
+                            )
+                        );
+                    ?>
+
+                    <p class="border border-r-0 border-y-0 border-black border-solid ml-3 my-0 pl-3 text-right text-sm">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?></p>
                 </div>
             </div>
 
