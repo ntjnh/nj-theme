@@ -31,7 +31,12 @@ module.exports = {
         container: {
             center: true,
         },
-        extend: {},
+        extend: {
+            fontSize: {
+                '3xxl': ['2rem', '2.375rem'],
+                '4xxl': ['2.5rem', '3rem']
+            }
+        },
     },
     plugins: [],
 }
