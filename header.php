@@ -25,7 +25,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( 'font-normal font-serif not-italic text-lg' ); ?>>
     <?php wp_body_open(); ?>
 
     <header class="header py-6 md:py-12">
