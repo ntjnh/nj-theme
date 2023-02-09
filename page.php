@@ -25,11 +25,13 @@ get_header();
                     the_post();
                 ?>
 
-                    <article class="page-content">
+                    <article class="page-content max-w-3xl mx-auto w-full">
 
-                        <h1 class="page-title"><?php the_title(); ?></h1>
+                        <h1 class="font-bold mb-8 mt-0 text-3xl md:text-4xl xl:text-4xxl"><?php the_title(); ?></h1>
 
-                        <?php the_content(); ?>
+                        <div class="text-lg">
+                            <?php the_content(); ?>
+                        </div>
                     </article>
 
                 <?php endwhile;
