@@ -2,25 +2,6 @@
 // Site-wide default styles
 //
 
-body {
-    font-family: $primary-font;
-    font-size: $text-m;
-    font-style: normal;
-    font-weight: $fw-reg;
-    margin: 0;
-    padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: $primary-font;
-    font-weight: $fw-bold;
-}
-
 .container {
     @media (max-width: 767px) {
         padding-left: 1.5rem;
