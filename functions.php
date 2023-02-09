@@ -27,6 +27,7 @@ function nate_setup() {
 	register_nav_menus(
 		array(
 			'main-menu' => esc_html__( 'Primary', 'nate' ),
+            'footer-menu' => esc_html__( 'Footer', 'nate' )
 		)
 	);
 }
