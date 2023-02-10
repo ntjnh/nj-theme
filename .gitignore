@@ -7,7 +7,6 @@
 # Build output
 build/
 dist/
-assets/css/*.css
 src/css/*.css
 
 # Dependency directories
