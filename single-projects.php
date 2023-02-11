@@ -22,40 +22,40 @@ $visit = get_field('visit');
 $gallery = get_field('gallery');
 
 ?>
-	<main class="page-single-project">
+	<main>
 
-		<div class="container project">
+		<div class="container">
 
             <?php while ( have_posts() ) : the_post(); ?>
 
-                <h1 class="project__title"><?php the_title(); ?></h1>
+                <h1 class="text-3xl sm:text-3xxl lg:text-4xl xl:text-4xxl text-center mb-6 md:text-left"><?php the_title(); ?></h1>
                 
-                <div class="row">
-                    <div class="col-12 col-md-9 order-2 order-md-1">
+                <div class="flex flex-wrap justify-between">
+                    <div class="w-full lg:w-[73%] order-2 md:order-1">
                         <div class="project__summary">
                             <?php echo $summary; ?>
                         </div>
                     </div>
 
-                    <div class="col-12 col-md-3 order-1 order-md-2 mb-4 mb-md-0">
-                        <div class="d-md-inline-block float-md-end h-100">
-                            <div class="text-center text-md-start">
+                    <div class="w-full lg:w-[23%] order-1 md:order-2 mb-4 md:mb-0">
+                        <div class="md:inline-block md:float-right h-full">
+                            <div class="text-center md:text-left">
 
-                                <h4 class="project__info">
-                                    <span class="text-bold">Website Type:</span> <?php echo $website_type; ?>
+                                <h4 class="font-normal mb-4 text-lg">
+                                    <span class="font-bold">Website Type:</span> <?php echo $website_type; ?>
                                 </h4>
 
-                                <h4 class="project__info">
-                                    <span class="text-bold">Involvement:</span> <?php echo $involvement; ?>
+                                <h4 class="font-normal mb-4 text-lg">
+                                    <span class="font-bold">Involvement:</span> <?php echo $involvement; ?>
                                 </h4>
 
-                                <h4 class="project__info">
-                                    <span class="text-bold">Platform:</span> <?php echo $platform; ?>
+                                <h4 class="font-normal mb-4 text-lg">
+                                    <span class="font-bold">Platform:</span> <?php echo $platform; ?>
                                 </h4>
     
-                                <a class="project__website" href="<?php echo $visit['url']; ?>" target="_blank" rel="noreferrer">Visit the website</a>
+                                <a class="inline-block hover:text-blue underline hover:no-underline" href="<?php echo $visit['url']; ?>" target="_blank" rel="noreferrer">Visit the website</a>
 
-                                <p class="project__smallprint"><em>I worked on this project while employed by DS.Emotion. I'm not a freelancer.</em></p>
+                                <p class="text-base	mt-5 mb-0 mx-0"><em>I worked on this project while employed by DS.Emotion. I'm not a freelancer.</em></p>
 
                             </div>
                         </div>
@@ -66,7 +66,7 @@ $gallery = get_field('gallery');
                 <div class="mt-5">
                     <?php foreach( $gallery as $image ): ?>
                         <div class="mb-3">
-                            <img class="mw-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+                            <img class="max-w-full" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
                         </div>
                     <?php endforeach; ?>
                 </div>
