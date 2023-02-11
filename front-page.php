@@ -15,11 +15,11 @@
 get_header();
 
 ?>
-	<main class="page-projects">
+	<main>
 
 		<div class="container">
 
-            <div class="row gx-5">
+            <div class="flex flex-wrap justify-between">
 
                 <?php
                     $args = array(
@@ -34,12 +34,12 @@ get_header();
 
                 ?>
 
-                <article class="col-6 project">
+                <article class="w-full md:w-[48%]">
 
-                    <a class="project__link" href="<?php the_permalink(); ?>">
-                        <img class="project__img mw-100" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                    <a class="block mb-4 md:mb-8 xl:mb-10 no-underline" href="<?php the_permalink(); ?>">
+                        <img class="max-w-full mb-2 md:mb-3 xl:mb-4" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
 
-                        <h2 class="project__title"><?php the_title(); ?></h2>
+                        <h2 class="transition-all duration-300 font-normal m-0 text-base md:text-xl xl:text-3xxl hover:text-blue hover:underline"><?php the_title(); ?></h2>
                     </a>
 
                 </article>
