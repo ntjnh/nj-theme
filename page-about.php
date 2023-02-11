@@ -16,14 +16,14 @@ $photo = get_field('photo');
 $photo_b = get_field('photo_b');
 
 ?>
-	<main class="about">
+	<main>
 
 		<div class="container">
 
-            <div class="row gx-5">
-                <div class="col-12 col-lg-6 order-2 order-lg-1">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full lg:w-[48%] order-2 lg:order-1">
 
-                    <h2 class="about__intro mt-0 mb-3 mb-md-4"><?php echo $introduction; ?></h2>
+                    <h2 class="font-normal mt-0 mb-3 md:mb-4"><?php echo $introduction; ?></h2>
 
                     <div class="mb-4">
                         <?php echo $content; ?>
@@ -33,11 +33,11 @@ $photo_b = get_field('photo_b');
 
                         <?php if( have_rows( 'skills' ) ) : ?>
 
-                        <h3 class="skills__title">Skills</h3>
+                        <h3 class="text-lg">Skills</h3>
 
-                        <ul class="skills__list">
+                        <ul class="columns-2 m-0 p-0">
                             <?php while( have_rows( 'skills' ) ) : the_row(); ?>
-                                <li><?php echo get_sub_field('skill'); ?></li>
+                                <li class="list-none"><?php echo get_sub_field('skill'); ?></li>
                             <?php endwhile; ?>
                         </ul>
 
@@ -47,8 +47,8 @@ $photo_b = get_field('photo_b');
 
                 </div>
 
-                <div class="col-12 col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0">
-                    <div class="mb-lg-4">
+                <div class="w-full lg:w-[48%] order-1 lg:order-2 mb-4 lg:mb-0">
+                    <div class="lg:mb-4">
                         <picture>
                             <source media="(max-width: 575px)" srcset="<?php echo $photo['sizes']['photo-xlarge']; ?>" />
                             <source media="(max-width: 767px)" srcset="<?php echo $photo['sizes']['photo-small']; ?>" />
@@ -56,11 +56,11 @@ $photo_b = get_field('photo_b');
                             <source media="(max-width: 1199px)" srcset="<?php echo $photo['sizes']['photo-large']; ?>" />
                             <source media="(max-width: 1499px)" srcset="<?php echo $photo['sizes']['photo-xlarge']; ?>" />
                             <source media="(min-width: 1500px)" srcset="<?php echo $photo['sizes']['photo-xxlarge']; ?>" />
-                            <img class="mw-100" src="<?php echo $photo['sizes']['photo-medium']; ?>" alt="<?php echo $photo['alt']; ?>" />
+                            <img class="max-w-full" src="<?php echo $photo['sizes']['photo-medium']; ?>" alt="<?php echo $photo['alt']; ?>" />
                         </picture>
                     </div>
 
-                    <div class="d-none d-lg-block">
+                    <div class="hidden lg:block">
                         <picture>
                             <source media="(max-width: 575px)" srcset="<?php echo $photo_b['sizes']['photo-xlarge']; ?>" />
                             <source media="(max-width: 767px)" srcset="<?php echo $photo_b['sizes']['photo-small']; ?>" />
@@ -68,7 +68,7 @@ $photo_b = get_field('photo_b');
                             <source media="(max-width: 1199px)" srcset="<?php echo $photo_b['sizes']['photo-large']; ?>" />
                             <source media="(max-width: 1499px)" srcset="<?php echo $photo_b['sizes']['photo-xlarge']; ?>" />
                             <source media="(min-width: 1500px)" srcset="<?php echo $photo_b['sizes']['photo-xxlarge']; ?>" />
-                            <img class="mw-100" src="<?php echo $photo_b['sizes']['photo-medium']; ?>" alt="<?php echo $photo_b['alt']; ?>" />
+                            <img class="max-w-full" src="<?php echo $photo_b['sizes']['photo-medium']; ?>" alt="<?php echo $photo_b['alt']; ?>" />
                         </picture>
                     </div>
                 </div>
