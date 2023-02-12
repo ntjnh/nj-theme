@@ -10,7 +10,7 @@
 get_header();
 
 ?>
-	<main class="py-5">
+	<main class="py-12">
 
 		<div class="container">
 
@@ -20,17 +20,17 @@ get_header();
                     the_post();
                 ?>
 
-                    <article class="pb-3 mx-auto" style="max-width:840px; width:100%;">
+                    <article class="max-w-3xl mx-auto w-full">
 
-                        <header class="entry-header">
-                            <h1 class="entry-title mb-3"><?php the_title(); ?></h1>
+                        <header>
+                            <h1 class="font-bold mb-2 mt-0 text-3xl md:text-4xl xl:text-4xxl"><?php the_title(); ?></h1>
 
-                            <div class="entry-meta mb-3">
+                            <div class="text-base mb-6">
                                 <?php echo get_the_date(); ?>
                             </div>
                         </header>
 
-                        <div class="entry-content">
+                        <div class="text-lg">
                             <?php the_content(); ?>
                         </div>
                     </article>
