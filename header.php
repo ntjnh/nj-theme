@@ -34,9 +34,9 @@
 
             <div class="w-full flex flex-wrap">
                 <div class="w-full sm:w-4/12 md:w-3/12 mb-3 sm:mb-0">
-                    <h1 class="block font-normal leading-none m-0 text-6xxl text-black text-center sm:text-left tracking-[-4px] uppercase">
+                    <p class="block font-normal leading-none m-0 text-6xxl text-black text-center sm:text-left tracking-[-4px] uppercase">
                         <a class="no-underline" href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo('title'); ?></a>
-                    </h1>
+                    </p>
                 </div>
 
                 <div class="w-full sm:w-8/12 md:w-9/12 flex flex-nowrap items-center justify-center sm:justify-end">
