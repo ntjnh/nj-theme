@@ -19,6 +19,8 @@ get_header();
 
 		<div class="container">
 
+            <p class="text-base"><em>The following projects were built on behalf of my employer. I am not a freelancer.</em></p>
+
             <div class="flex flex-wrap justify-between">
 
                 <?php
