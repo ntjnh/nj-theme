@@ -30,7 +30,7 @@
 
     <header class="header py-6 md:py-12">
         
-        <div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-box-lg xl:max-w-box-xl 2xl:max-w-screen-xl px-6 md:px-3 mx-auto">
+        <div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-[82.5%] 2xl:max-w-screen-xl px-6 md:px-3 mx-auto">
 
             <div class="w-full flex flex-wrap">
                 <div class="w-full sm:w-4/12 md:w-3/12 mb-4 sm:mb-0">

@@ -18,12 +18,12 @@ $photo_b = get_field('photo_b');
 ?>
 	<main>
 
-		<div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-box-lg xl:max-w-box-xl 2xl:max-w-screen-xl px-6 md:px-3">
+		<div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-[82.5%] 2xl:max-w-screen-xl px-6 md:px-3">
 
             <div class="flex flex-wrap justify-between">
                 <div class="w-full lg:w-[48%] order-2 lg:order-1">
 
-                    <h2 class="font-normal mt-0 mb-4 md:mb-6"><?php echo $introduction; ?></h2>
+                    <h2 class="font-normal text-3xxl mt-0 mb-4 md:mb-6"><?php echo $introduction; ?></h2>
 
                     <div class="mb-6">
                         <?php echo $content; ?>

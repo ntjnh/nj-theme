@@ -17,7 +17,7 @@ get_header();
 ?>
 	<main class="font-serif text-lg pb-12">
         
-        <div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-box-lg xl:max-w-box-xl 2xl:max-w-screen-xl px-6 md:px-3">
+        <div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-[82.5%] 2xl:max-w-screen-xl px-6 md:px-3">
 
 			<article class="max-w-3xl mx-auto w-full">
 
