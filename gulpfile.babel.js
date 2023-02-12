@@ -1,9 +1,5 @@
 import gulp from 'gulp';
 
-import dartSass from 'sass';
-import gulpSass from 'gulp-sass';
-const sass = gulpSass(dartSass);
-
 import postcss from 'gulp-postcss';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'autoprefixer';
@@ -22,8 +18,7 @@ import { deleteAsync } from 'del';
 
 const paths = {
     styles: {
-        src: 'assets/scss/**/*.scss',
-        cssSrc: 'assets/css/*.css',
+        src: 'assets/css/*.css',
         dest: 'build/css',
         delete: 'build/css/*.css'
     },
@@ -34,15 +29,8 @@ const paths = {
     }
 };
 
-export function styles() {
-    return gulp.src(paths.styles.src)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(paths.styles.dest))
-        .pipe(browserSync.stream());
-};
-
 export function css() {
-    return gulp.src(paths.styles.cssSrc)
+    return gulp.src(paths.styles.src)
         .pipe(sourcemaps.init())
         .pipe(postcss([autoprefixer(), tailwind(), postcssNested()]))
         .pipe(sourcemaps.write('.'))
@@ -69,8 +57,7 @@ gulp.task('serve', function (done) {
     });
 
     gulp.watch(paths.scripts.src).on("change", gulp.series(scripts, browserSync.reload));
-    gulp.watch('assets/scss/**/*.scss', gulp.series(styles, css));
-    gulp.watch(paths.styles.cssSrc).on("change", gulp.series(css, browserSync.reload));
+    gulp.watch(paths.styles.src).on("change", gulp.series(css, browserSync.reload));
     gulp.watch("*.php").on("change", gulp.series(css, browserSync.reload));
 
     done();
@@ -80,9 +67,9 @@ export function clean() {
     return deleteAsync([paths.styles.delete, paths.scripts.delete]);
 };
 
-const watchSass = () => gulp.watch(paths.styles.src, gulp.series(styles, css));
+const watchcss = () => gulp.watch(paths.styles.src, css);
 const watchJs = () => gulp.watch(paths.scripts.src, scripts);
 
-export const watch = gulp.series(styles, css, scripts, gulp.parallel(watchSass, watchJs));
+export const watch = gulp.series(css, scripts, gulp.parallel(watchcss, watchJs));
 
-export default gulp.task('build', gulp.series(clean, styles, css, scripts));
+export default gulp.task('build', gulp.series(clean, css, scripts));
