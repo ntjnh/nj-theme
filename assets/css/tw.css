@@ -12,6 +12,10 @@
         @apply font-serif font-bold leading-tight;
     }
 
+    p {
+        @apply mb-4;
+    }
+
     /* Default page template */
     h2,
     h3,
@@ -120,7 +124,6 @@
 }
 
 @layer utilities {
-    /*hi */
     @media (max-width: 767px) {
         .container {
             padding-left: 1.5rem;
@@ -137,6 +140,7 @@
     @media screen(md) {
         .container {
             max-width: 720px;
+            @apply px-3;
         }
     }
 
