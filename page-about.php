@@ -23,9 +23,9 @@ $photo_b = get_field('photo_b');
             <div class="flex flex-wrap justify-between">
                 <div class="w-full lg:w-[48%] order-2 lg:order-1">
 
-                    <h2 class="font-normal mt-0 mb-3 md:mb-4"><?php echo $introduction; ?></h2>
+                    <h2 class="font-normal mt-0 mb-4 md:mb-6"><?php echo $introduction; ?></h2>
 
-                    <div class="mb-4">
+                    <div class="mb-6">
                         <?php echo $content; ?>
                     </div>
 
@@ -47,8 +47,8 @@ $photo_b = get_field('photo_b');
 
                 </div>
 
-                <div class="w-full lg:w-[48%] order-1 lg:order-2 mb-4 lg:mb-0">
-                    <div class="lg:mb-4">
+                <div class="w-full lg:w-[48%] order-1 lg:order-2 mb-6 lg:mb-0">
+                    <div class="lg:mb-6">
                         <picture>
                             <source media="(max-width: 575px)" srcset="<?php echo $photo['sizes']['photo-xlarge']; ?>" />
                             <source media="(max-width: 767px)" srcset="<?php echo $photo['sizes']['photo-small']; ?>" />

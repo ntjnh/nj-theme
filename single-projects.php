@@ -37,7 +37,7 @@ $gallery = get_field('gallery');
                         </div>
                     </div>
 
-                    <div class="w-full lg:w-[23%] order-1 md:order-2 mb-4 md:mb-0">
+                    <div class="w-full lg:w-[23%] order-1 md:order-2 mb-6 md:mb-0">
                         <div class="md:inline-block md:float-right h-full">
                             <div class="text-center md:text-left">
 

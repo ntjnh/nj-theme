@@ -33,7 +33,7 @@
         <div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-box-lg xl:max-w-box-xl 2xl:max-w-screen-xl px-6 md:px-3 mx-auto">
 
             <div class="w-full flex flex-wrap">
-                <div class="w-full sm:w-4/12 md:w-3/12 mb-3 sm:mb-0">
+                <div class="w-full sm:w-4/12 md:w-3/12 mb-4 sm:mb-0">
                     <p class="block font-normal leading-none m-0 text-6xxl text-black text-center sm:text-left tracking-[-4px] uppercase">
                         <a class="no-underline" href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo('title'); ?></a>
                     </p>

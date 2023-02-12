@@ -15,7 +15,7 @@
 get_header();
 
 ?>
-	<main class="pb-5">
+	<main class="pb-12">
 
 		<div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-box-lg xl:max-w-box-xl 2xl:max-w-screen-xl px-6 md:px-3">
 
@@ -25,7 +25,7 @@ get_header();
                     the_post();
                 ?>
 
-                    <article class="page-content max-w-3xl mx-auto w-full">
+                    <article class="max-w-3xl mx-auto w-full">
 
                         <h1 class="font-bold mb-8 mt-0 text-3xl md:text-4xl xl:text-4xxl"><?php the_title(); ?></h1>
 
