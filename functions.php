@@ -8,7 +8,7 @@
  */
 
 if ( ! defined( 'NATE_VERSION' ) ) {
-	define( 'NATE_VERSION', '2.0.0' );
+	define( 'NATE_VERSION', '2.0.1' );
 }
 
 function nate_setup() {
