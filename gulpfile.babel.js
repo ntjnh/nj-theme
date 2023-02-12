@@ -83,7 +83,6 @@ export function clean() {
 const watchSass = () => gulp.watch(paths.styles.src, gulp.series(styles, css));
 const watchJs = () => gulp.watch(paths.scripts.src, scripts);
 
-const build = gulp.series(clean, styles, css, scripts);
 export const watch = gulp.series(styles, css, scripts, gulp.parallel(watchSass, watchJs));
 
-export default build;
+export default gulp.task('build', gulp.series(clean, styles, css, scripts));
