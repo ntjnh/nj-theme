@@ -17,7 +17,7 @@ get_header();
 ?>
 	<main>
 
-		<div class="container">
+		<div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-box-lg xl:max-w-box-xl 2xl:max-w-screen-xl px-6 md:px-3">
 
             <p class="text-base"><em>The following projects were built on behalf of my employer. I am not a freelancer.</em></p>
 

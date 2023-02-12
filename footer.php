@@ -13,7 +13,7 @@
 
     <footer class="footer pb-6 pt-12">
 
-        <div class="container mx-auto">
+        <div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-box-lg xl:max-w-box-xl 2xl:max-w-screen-xl px-6 md:px-3 mx-auto">
 
             <div class="flex flex-wrap">
                 <div class="w-full sm:w-6/12">

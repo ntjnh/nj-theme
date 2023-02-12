@@ -17,7 +17,7 @@ get_header();
 ?>
 	<main class="font-serif text-lg pb-5">
         
-        <div class="container">
+        <div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-box-lg xl:max-w-box-xl 2xl:max-w-screen-xl px-6 md:px-3">
             <header class="entry-header mb-6">
                 <h2 class="font-bold text-4xl"><?php esc_html_e( 'Page Not Found', 'goal' ); ?></h2>
             </header>

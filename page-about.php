@@ -18,7 +18,7 @@ $photo_b = get_field('photo_b');
 ?>
 	<main>
 
-		<div class="container">
+		<div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-box-lg xl:max-w-box-xl 2xl:max-w-screen-xl px-6 md:px-3">
 
             <div class="flex flex-wrap justify-between">
                 <div class="w-full lg:w-[48%] order-2 lg:order-1">

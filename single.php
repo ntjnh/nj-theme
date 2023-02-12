@@ -12,7 +12,7 @@ get_header();
 ?>
 	<main class="py-12">
 
-		<div class="container">
+		<div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-box-lg xl:max-w-box-xl 2xl:max-w-screen-xl px-6 md:px-3">
 
             <?php if ( have_posts() ) :
 
