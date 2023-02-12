@@ -41,15 +41,15 @@ $gallery = get_field('gallery');
                         <div class="md:inline-block md:float-right h-full">
                             <div class="text-center md:text-left">
 
-                                <h4 class="font-normal mb-4 text-lg">
+                                <h4 class="font-normal leading-tight mb-4 text-lg">
                                     <span class="font-bold">Website Type:</span> <?php echo $website_type; ?>
                                 </h4>
 
-                                <h4 class="font-normal mb-4 text-lg">
+                                <h4 class="font-normal leading-tight mb-4 text-lg">
                                     <span class="font-bold">Involvement:</span> <?php echo $involvement; ?>
                                 </h4>
 
-                                <h4 class="font-normal mb-4 text-lg">
+                                <h4 class="font-normal leading-tight mb-4 text-lg">
                                     <span class="font-bold">Platform:</span> <?php echo $platform; ?>
                                 </h4>
     
