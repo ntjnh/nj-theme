@@ -33,7 +33,7 @@ $photo_b = get_field('photo_b');
 
                         <?php if( have_rows( 'skills' ) ) : ?>
 
-                        <h3 class="text-lg">Skills</h3>
+                        <h3 class="mb-2 text-lg">Skills</h3>
 
                         <ul class="columns-2 m-0 p-0">
                             <?php while( have_rows( 'skills' ) ) : the_row(); ?>
