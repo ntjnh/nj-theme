@@ -11,7 +11,7 @@
 
 ?>
 
-    <footer class="footer pb-4 pt-5">
+    <footer class="footer pb-6 pt-12">
 
         <div class="container mx-auto">
 
