@@ -38,10 +38,10 @@ get_header();
 
                 <article class="w-full md:w-[48%]">
 
-                    <a class="block mb-4 md:mb-8 xl:mb-10 no-underline" href="<?php the_permalink(); ?>">
-                        <img class="max-w-full mb-2 md:mb-3 xl:mb-4" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                    <a class="block mb-8 xl:mb-10 no-underline" href="<?php the_permalink(); ?>">
+                        <img class="max-w-full mb-3 xl:mb-4" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
 
-                        <h2 class="transition-all duration-300 font-normal m-0 text-base md:text-xl xl:text-3xxl hover:text-blue hover:underline"><?php the_title(); ?></h2>
+                        <h2 class="transition-all duration-300 font-normal m-0 hover:text-blue hover:underline"><?php the_title(); ?></h2>
                     </a>
 
                 </article>
