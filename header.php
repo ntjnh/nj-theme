@@ -32,11 +32,11 @@
         
         <div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-[82.5%] 2xl:max-w-screen-xl px-6 md:px-3 mx-auto">
 
-            <div class="w-full flex flex-wrap">
+            <div class="w-full flex flex-wrap items-center">
                 <div class="w-full sm:w-4/12 md:w-3/12 mb-4 sm:mb-0">
-                    <p class="block font-normal leading-none m-0 text-6xxl text-black text-center sm:text-left tracking-[-4px] uppercase">
-                        <a class="no-underline" href="<?php echo get_bloginfo('url'); ?>"><?php echo get_bloginfo('title'); ?></a>
-                    </p>
+                    <a class="no-underline" href="<?php echo get_bloginfo('url'); ?>">
+                        <img class="mx-auto sm:mx-0 py-4 w-[150px]" src="<?php echo get_template_directory_uri(); ?>/build/images/nate.svg" alt="<?php echo get_bloginfo('title'); ?>">
+                    </a>
                 </div>
 
                 <div class="w-full sm:w-8/12 md:w-9/12 flex flex-nowrap items-center justify-center sm:justify-end">
