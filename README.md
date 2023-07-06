@@ -6,20 +6,26 @@ My custom WordPress theme for my website, [natejonah.com](https://natejonah.com)
 ## Branding info
 
 ### Colours
-Black - #222
+Navy - #001b3d
+
+Lighter Navy - #2a426e
 
 Blue - #0052bd
 
-White - #fff
+Light Blue - #a9b8fd
+
+White - #ffffff
 
 Yellow - #fde66b
 
 ### Fonts
-Primary font - [Bely](https://fonts.adobe.com/fonts/bely)
-
-Fallbacks - [Merriweather](https://fonts.google.com/specimen/Merriweather) and serif
+Primary - [Inter](https://fonts.google.com/specimen/Inter) and sans-serif
 
 ### Font Weights
 Regular - 400
+
+Medium - 500
+
+SemiBold - 600
 
 Bold - 700
