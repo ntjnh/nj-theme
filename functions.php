@@ -36,8 +36,7 @@ add_action( 'after_setup_theme', 'nate_setup' );
 
 // Enqueue scripts and styles.
 function nate_scripts() {
-    wp_enqueue_style( 'adobe-fonts', 'https://use.typekit.net/xop5aup.css', array(), false, 'all' );	
-    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap', array(), false, 'all' );	
+    wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', array(), false, 'all' );	
     wp_enqueue_style( 'tailwind', get_template_directory_uri() . '/build/css/tw.css', array(), '3.2.4', 'all' );
 
     wp_enqueue_script( 'fontawesome', 'https://kit.fontawesome.com/6e2ccb04f1.js?ver=5.15.3', array(), '5.15.3', false );

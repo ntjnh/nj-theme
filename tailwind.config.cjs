@@ -17,10 +17,9 @@ module.exports = {
             '3xl': '1800px'
         },
         fontFamily: {
-            serif: [
-                'bely',
-                'Merriweather',
-                ...defaultTheme.fontFamily.serif
+            sans: [
+                'Inter',
+                ...defaultTheme.fontFamily.sans
             ]
         },
         colors: {
