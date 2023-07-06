@@ -43,7 +43,7 @@
                         );
                     ?>
 
-                    <p class="border border-r-0 border-y-0 border-black border-solid ml-3 my-0 pl-3 text-right text-sm">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?></p>
+                    <p class="border border-r-0 border-y-0 border-blue-980 border-solid ml-3 my-0 pl-3 text-right text-sm">&copy; <?php echo get_bloginfo('name') . ' ' . date('Y'); ?></p>
                 </div>
             </div>
 
