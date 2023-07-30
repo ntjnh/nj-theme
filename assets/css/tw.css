@@ -59,20 +59,8 @@
 
 @layer components {
     /* WordPress Nav Menu styles */
-    .header-nav ul {
-        @apply m-0 p-0;
-    }
-
-    .header-nav ul li {
-        @apply inline-block list-none;
-    }
-
     .header-nav ul li.current-menu-item a {
-        @apply text-blue-250 underline;
-    }
-
-    .header-nav ul li a {
-        @apply inline-block text-xl leading-tight p-3 no-underline hover:text-blue-250 hover:underline;
+        @apply text-amber-250 no-underline;
     }
 
     .footer-nav {
@@ -88,16 +76,6 @@
     }
 
     .footer-nav .menu .menu-item a {
-        @apply pl-3 hover:text-blue-250 hover:underline;
-    }
-
-    @media screen(md) {
-        .header-nav ul li {
-            @apply ml-8;
-        }
-
-        .header-nav ul li a {
-            @apply text-2xl px-0;
-        }
+        @apply pl-3 hover:text-blue-250;
     }
 }

@@ -25,7 +25,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'font-normal font-sans not-italic text-lg' ); ?>>
+<body <?php body_class( 'bg-blue-980 font-normal font-sans not-italic text-lg text-white' ); ?>>
     <?php wp_body_open(); ?>
 
     <header class="header py-6 md:py-12">
@@ -35,7 +35,7 @@
             <div class="w-full flex flex-wrap items-center">
                 <div class="w-full sm:w-4/12 md:w-3/12 mb-4 sm:mb-0">
                     <a class="no-underline" href="<?php echo get_bloginfo('url'); ?>">
-                        <img class="mx-auto sm:mx-0 py-4 w-[150px]" src="<?php echo get_template_directory_uri(); ?>/build/images/nate.svg" alt="<?php echo get_bloginfo('title'); ?>">
+                        <img class="invert mx-auto sm:mx-0 py-4 w-[150px]" src="<?php echo get_template_directory_uri(); ?>/build/images/nate.svg" alt="<?php echo get_bloginfo('title'); ?>">
                     </a>
                 </div>
 
@@ -46,7 +46,10 @@
                                 'theme_location' => 'main-menu',
                                 'menu_id' => 'main-nav',
                                 'container' => 'nav',
-                                'container_class' => 'header-nav'
+                                'container_class' => 'header-nav',
+                                'menu_class' => 'm-0 p-0', // ul
+                                'li_class' => 'font-semibold inline-block leading-normal list-none text-xs tracking-widest md:ml-8',
+                                'a_class' => 'p-3 no-underline text-white uppercase md:px-0 hover:text-amber-250'
                             )
                         );
                     ?>
