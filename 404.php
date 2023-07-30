@@ -15,7 +15,7 @@
 get_header();
 
 ?>
-	<main class="font-serif text-lg pb-12">
+	<main class="font-sans text-lg pb-12">
         
         <div class="container sm:max-w-box-sm md:max-w-box-md lg:max-w-[82.5%] 2xl:max-w-screen-xl px-6 md:px-3">
 

@@ -17,21 +17,26 @@ module.exports = {
             '3xl': '1800px'
         },
         fontFamily: {
-            serif: [
-                'bely',
-                'Merriweather',
-                ...defaultTheme.fontFamily.serif
+            sans: [
+                'Inter',
+                ...defaultTheme.fontFamily.sans
             ]
-        },
-        colors: {
-            black: '#222',
-            blue: '#0052bd',
-            yellow: '#fde66b'
         },
         container: {
             center: true,
         },
         extend: {
+            colors: {
+                amber: {
+                    250: '#fde66b'
+                },
+                blue: {
+                    250: '#a9b8fd',
+                    650: '#0052bd',
+                    920: '#2a426e',
+                    980: '#001b3d',
+                }
+            },
             fontSize: {
                 '3xxl': ['2rem', '2.375rem'],
                 '4xxl': ['2.5rem', '3rem'],

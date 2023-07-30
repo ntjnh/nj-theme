@@ -1,6 +1,6 @@
 {
   "name": "nate",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Nate WordPress theme",
   "main": "app.js",
   "type": "module",

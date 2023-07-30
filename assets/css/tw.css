@@ -9,7 +9,7 @@
     h4,
     h5,
     h6 {
-        @apply font-serif font-bold leading-tight mb-4;
+        @apply font-sans font-bold leading-tight mb-4;
     }
 
     h2 {
@@ -38,7 +38,7 @@
     }
 
     p > a.cky-banner-element {
-        @apply bg-blue border border-blue border-solid box-border cursor-pointer inline-block no-underline py-2 px-8 rounded-none text-white;
+        @apply bg-blue-650 border border-blue-650 border-solid box-border cursor-pointer inline-block no-underline py-2 px-8 rounded-none text-white;
     }
 
     div.cookie-policy-p p:last-child {
@@ -59,20 +59,8 @@
 
 @layer components {
     /* WordPress Nav Menu styles */
-    .header-nav ul {
-        @apply m-0 p-0;
-    }
-
-    .header-nav ul li {
-        @apply inline-block list-none;
-    }
-
     .header-nav ul li.current-menu-item a {
-        @apply text-blue underline;
-    }
-
-    .header-nav ul li a {
-        @apply inline-block text-xl leading-tight p-3 no-underline hover:text-blue hover:underline;
+        @apply text-amber-250 no-underline;
     }
 
     .footer-nav {
@@ -88,16 +76,6 @@
     }
 
     .footer-nav .menu .menu-item a {
-        @apply pl-3 hover:text-blue hover:underline;
-    }
-
-    @media screen(md) {
-        .header-nav ul li {
-            @apply ml-8;
-        }
-
-        .header-nav ul li a {
-            @apply text-2xl px-0;
-        }
+        @apply pl-3 hover:text-blue-250;
     }
 }
