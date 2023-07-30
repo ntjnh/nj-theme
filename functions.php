@@ -34,6 +34,30 @@ function nate_setup() {
 
 add_action( 'after_setup_theme', 'nate_setup' );
 
+/** Menu classes */
+
+// List items
+function add_menu_li_class( $classes, $item, $args ) {
+    if( isset( $args->li_class ) ) {
+        $classes[] = $args->li_class;
+    }
+
+    return $classes;
+}
+
+add_filter( 'nav_menu_css_class', 'add_menu_li_class', 1, 3 );
+
+// Links
+function add_menu_a_class( $classes, $item, $args ) {
+    if( isset( $args->a_class ) ) {
+        $classes[ 'class' ] = $args->a_class;
+    }
+
+    return $classes;
+}
+
+add_filter( 'nav_menu_link_attributes', 'add_menu_a_class', 1, 3 );
+
 // Enqueue scripts and styles.
 function nate_scripts() {
     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap', array(), false, 'all' );	
@@ -51,4 +75,4 @@ add_action( 'wp_enqueue_scripts', 'nate_scripts' );
 add_filter( 'big_image_size_threshold', '__return_false' );
 
 // Custom post types
-require('inc/cpt.php');
+require( 'inc/cpt.php' );
