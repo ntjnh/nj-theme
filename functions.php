@@ -76,3 +76,4 @@ add_filter( 'big_image_size_threshold', '__return_false' );
 
 // Custom post types
 require( 'inc/cpt.php' );
+require( 'inc/coding-cpt.php' );
