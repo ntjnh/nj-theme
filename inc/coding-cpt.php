@@ -6,7 +6,7 @@
  *
  */
 
-
+// Coding custom post type
 function coding_cpt() {
     $labels = array(
         'name' => _x('Coding', 'Post Type General Name', 'nate'),
@@ -29,7 +29,7 @@ function coding_cpt() {
         'description' => __('Coding Projects', 'nate'),
         'labels' => $labels,
         'supports' => array('title', 'editor', 'thumbnail', 'revisions', 'custom-fields'),
-        'taxonomies' => array('coding-types'),
+        'taxonomies' => array('tech'),
         'hierarchical' => false,
         'public' => true,
         'show_ui' => true,
@@ -38,7 +38,7 @@ function coding_cpt() {
         'show_in_admin_bar' => true,
         'menu_position' => 5,
         'can_export' => true,
-        'has_archive' => true,
+        'has_archive' => false,
         'exclude_from_search' => false,
         'publicly_queryable' => true,
         'capability_type' => 'post',
@@ -50,24 +50,25 @@ function coding_cpt() {
 
 add_action('init', 'coding_cpt', 0);
 
-add_action( 'init', 'purpose_taxonomy', 0 );
+// Tech taxonomy for Coding custom post type
+add_action( 'init', 'tech_taxonomy', 0 );
     
-function purpose_taxonomy() {
+function tech_taxonomy() {
     $labels = array(
-        'name' => _x( 'Purposes', 'taxonomy general name' ),
-        'singular_name' => _x( 'Purpose', 'taxonomy singular name' ),
-        'search_items' =>  __( 'Search Purposes' ),
-        'all_items' => __( 'All Purposes' ),
-        'parent_item' => __( 'Parent Purpose' ),
-        'parent_item_colon' => __( 'Parent Purpose:' ),
-        'edit_item' => __( 'Edit Purpose' ), 
-        'update_item' => __( 'Update Purpose' ),
-        'add_new_item' => __( 'Add New Purpose' ),
-        'new_item_name' => __( 'New Purpose Name' ),
-        'menu_name' => __( 'Purposes' ),
+        'name' => _x( 'Tech', 'taxonomy general name' ),
+        'singular_name' => _x( 'Tech', 'taxonomy singular name' ),
+        'search_items' =>  __( 'Search Tech' ),
+        'all_items' => __( 'All Tech' ),
+        'parent_item' => __( 'Parent Tech' ),
+        'parent_item_colon' => __( 'Parent Tech:' ),
+        'edit_item' => __( 'Edit Tech' ), 
+        'update_item' => __( 'Update Tech' ),
+        'add_new_item' => __( 'Add New Tech' ),
+        'new_item_name' => __( 'New Tech Name' ),
+        'menu_name' => __( 'Tech' ),
     );    
     
-    register_taxonomy( 'purpose', array( 'coding' ), array(
+    register_taxonomy( 'tech', array( 'coding' ), array(
         'hierarchical' => true,
         'labels' => $labels,
         'show_ui' => true,
