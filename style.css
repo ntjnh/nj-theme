@@ -8,3 +8,7 @@ Tested up to: 6.3.2
 Requires PHP: 8.2.10
 Text Domain: nate
 */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
