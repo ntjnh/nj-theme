@@ -1,23 +1,24 @@
-# macOS
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-
-# VS Code settings
-.vscode/
-
-# Build output
-build/
-dist/
-src/css/*.css
-
-# Dependency directories
-node_modules/
-vendor/
-
-# Sass
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
-
-# Misc
-favicon.png
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

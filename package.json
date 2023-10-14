@@ -1,12 +1,10 @@
 {
-  "name": "nate",
-  "version": "3.1.0",
+  "name": "nj-theme",
+  "version": "3.0.0",
   "description": "Nate WordPress theme",
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "build": "gulp build",
-    "start": "gulp serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,24 +12,9 @@
     "url": "git+https://github.com/ntjnh/nj-theme.git"
   },
   "author": "Nate",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ntjnh/nj-theme/issues"
   },
   "homepage": "https://github.com/ntjnh/nj-theme#readme",
-  "devDependencies": {
-    "@babel/core": "^7.20.12",
-    "@babel/register": "^7.18.9",
-    "autoprefixer": "^10.4.13",
-    "browser-sync": "^2.27.11",
-    "del": "^7.0.0",
-    "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-postcss": "^9.0.1",
-    "gulp-sourcemaps": "^3.0.0",
-    "postcss": ">=8.4.31",
-    "tailwindcss": "^3.2.4",
-    "webpack": "^5.75.0",
-    "webpack-stream": "^7.0.0"
-  }
+  "devDependencies": {}
 }
